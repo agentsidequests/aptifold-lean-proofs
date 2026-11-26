@@ -1,0 +1,52 @@
+\section{The phase at infinity in the light-ring limit}
+\label{app:phase}
+
+Use the tortoise origin \(x=0\) at \(r=3\), \(M=1\), and
+\(h=(j+1/2)^{-1}\). With \(s=b-1/2\), the semiclassical equation is
+\[
+ -h^2 u''+(V_0+h^2 V_2)u=E_h u,\quad
+ V_2=-f\left(\frac{1}{4r^2}+\frac{6}{r^3}\right),
+ \quad E_h=a+2as h+O(h^2).
+\]
+In the Weber equation the ingoing solution is \(D_\nu(-z)\) with
+\(z=e^{-\ii\pi/4}\sqrt{2a}\,y\), \(\nu=-1/2+\ii s\).
+Matching the right wave phases \(\pm(ay^2/2+s\log y)\) in the
+connection formula of \cite{dlmf} gives
+\[
+ r_s=-\,\frac{\ii\,\Gamma(1/2-\ii s)}{\sqrt{2\pi}}
+      e^{-\pi s/2}(2a)^{\ii s}.
+\]
+In particular \(|r_s|^2=(1+e^{2\pi s})^{-1}\).
+To fix the phase at infinity let
+\(p_h=\sqrt{E_h-V_0-h^2 V_2}\) and
+\(\Phi_h(x)=\sqrt{E_h}x-\int_x^\infty(p_h(t)-\sqrt{E_h})\,\ud t\).
+Write \(p_0=\sqrt{a-V_0}\). The constants that survive right matching are
+\[
+\begin{split}
+ J&=\int_0^\infty(\sqrt a-p_0(t))\,\ud t,\\
+ C_E&=\lim_{x\downarrow0}
+ \left[\frac{x}{2\sqrt a}
+   -\frac12\int_x^\infty\left(\frac1{p_0(t)}-\frac1{\sqrt a}\right)\ud t
+   -\frac{\log x}{2a}\right].
+\end{split}
+\]
+Here \(p_0(x)=a x+O(x^2)\) on the right. At \(x=h^{2/5}\) set
+\(Y=x/\sqrt h\). The phase divided by \(h\) is
+\[
+ \tfrac12 aY^2+s\log Y+J/h+\tfrac{s}{2}\log h
+    + 2as C_E+O(h^{1/5}).
+\]
+The static Taylor remainder is \(O(x^3/h)\), and the second-order
+energy remainder is \(O(h/x^2)\). The integrals for the retained
+terms give \(J\simeq1.09919898\) and \(C_E\simeq-21.23316679\).
+Division by the nonzero Weber incident coefficient then gives
+\[
+ R_j\!\left(\frac{j+b}{3\sqrt3}\right)
+   = e^{-2\ii J(j+1/2)+\ii s\log(j+1/2)-4\ii a s C_E}
+     \big[r_s+O((j+1/2)^{-1/5})\big].
+\]
+The factor of two in the phase is from taking the outgoing over
+incoming coefficient. On the left the common phase cancels. The
+parent and daughter share the same tortoise origin. Their phase
+difference yields the coefficient \(1/2\) of \(\log\ell\) in
+Section~\ref{sec:followons}.

@@ -1,0 +1,21 @@
+{
+  "parent_ell": 4,
+  "frequency_band": [
+    "13/20",
+    "27/40"
+  ],
+  "interpolation_samples_per_wave": 52,
+  "guarded_frequency_panels": 4096,
+  "match_radius": "36",
+  "second_strain_magnitude_lower": "[1.213086365225990448e-5 +/- 3.80e-24]",
+  "minimum_strain_magnitude_upper": "[1.224618566817729555e-5 +/- 1.66e-26]",
+  "all_minimizers_in_frequency_bracket": [
+    "54247/81920",
+    "109059/163840"
+  ],
+  "perfect_opposition_crossing_bracket": [
+    "131/200",
+    "33/50"
+  ],
+  "opposition_ratio_real_part_lower": "[1.002344481893968298 +/- 3.12e-19]"
+}

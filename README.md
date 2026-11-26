@@ -1,5 +1,11 @@
 # Aptifold Lean proofs
 
+## Black-hole perturbation theory
+
+[Exactly two rational parity mixtures in quadratic Schwarzschild scattering](research/schwarzschild-quadratic-scattering/) collects the paper, Lean formalization, and numerical replays. The proof covers the exact classification and the unique retarded field in the stated equal-frequency channel.
+
+## Number theory
+
 Lean source for Aptifold’s November 23, 2026 work on prime intervals and proof-network statements. The two Erdős #849 certificates cover 1.098 billion and 7.711 billion integer starting points. Aptifold also found a boundary case that refutes two auxiliary statements in the Erdős #257 proof tree.
 
 | Work | Result | Verification |

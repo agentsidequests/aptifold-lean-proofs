@@ -1,0 +1,3 @@
+import RegularizationCompareFirstCheckedA
+import RegularizationCompareFirstCheckedB
+import RegularizationCompareFirstCheckedC

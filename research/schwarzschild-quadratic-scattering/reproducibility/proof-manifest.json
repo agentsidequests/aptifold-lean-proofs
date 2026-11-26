@@ -1,0 +1,5214 @@
+{
+  "schema": 1,
+  "lean_toolchain": "leanprover/lean4:v4.33.1",
+  "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+  "mathlib_revision": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "roots": [
+    "VacuumSeries",
+    "ParityMasterProjection",
+    "ParityReconstructionTheorem",
+    "QuadraticScatteringReconstruction",
+    "MetricMeromorphicClassification",
+    "RegularizationBridge",
+    "AdmittedFutureHorizon",
+    "CompleteOutgoingStrain",
+    "RationalLocalUniqueness",
+    "LinearRetardedUniqueness",
+    "RetardedScattering",
+    "RetardedStrainError",
+    "RetardedGreenReplay",
+    "ScatteringTailEstimate",
+    "AngularRetardedScattering",
+    "ScatteringPhysicalBounds",
+    "PhysicalSoftResponse",
+    "SharpSoftIncidence",
+    "SoftThresholdFactor",
+    "LightRingPhaseLimits",
+    "AngularPolarizationZeros"
+  ],
+  "external_imports": [
+    "Init",
+    "Init.Data.Rat",
+    "Lean.Util.PtrSet",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.Field.Defs",
+    "Mathlib.Algebra.Polynomial.Derivative",
+    "Mathlib.Algebra.Polynomial.Div",
+    "Mathlib.Algebra.Polynomial.Inductions",
+    "Mathlib.Algebra.Polynomial.Laurent",
+    "Mathlib.Algebra.Polynomial.Reverse",
+    "Mathlib.Analysis.Analytic.Basic",
+    "Mathlib.Analysis.Analytic.Constructions",
+    "Mathlib.Analysis.Analytic.IsolatedZeros",
+    "Mathlib.Analysis.Analytic.OfScalars",
+    "Mathlib.Analysis.Analytic.Uniqueness",
+    "Mathlib.Analysis.Calculus.Deriv.Inv",
+    "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+    "Mathlib.Analysis.Calculus.Deriv.Polynomial",
+    "Mathlib.Analysis.Calculus.Deriv.Prod",
+    "Mathlib.Analysis.Calculus.Deriv.Shift",
+    "Mathlib.Analysis.Calculus.FDeriv.Analytic",
+    "Mathlib.Analysis.Complex.Basic",
+    "Mathlib.Analysis.Complex.ExponentialBounds",
+    "Mathlib.Analysis.Complex.Polynomial.Basic",
+    "Mathlib.Analysis.Complex.RealDeriv",
+    "Mathlib.Analysis.Meromorphic.Basic",
+    "Mathlib.Analysis.Normed.Ring.Lemmas",
+    "Mathlib.Analysis.ODE.ExistUnique",
+    "Mathlib.Analysis.ODE.Gronwall",
+    "Mathlib.Analysis.Real.Sqrt",
+    "Mathlib.Analysis.SpecialFunctions.Complex.Analytic",
+    "Mathlib.Analysis.SpecialFunctions.Complex.LogDeriv",
+    "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+    "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals",
+    "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic",
+    "Mathlib.Analysis.SpecificLimits.Basic",
+    "Mathlib.Data.Complex.Basic",
+    "Mathlib.Data.Int.Cast.Basic",
+    "Mathlib.Data.Matrix.Mul",
+    "Mathlib.Data.Nat.Factorial.Basic",
+    "Mathlib.Data.Rat.Cast.Defs",
+    "Mathlib.Data.Real.Basic",
+    "Mathlib.FieldTheory.RatFunc.AsPolynomial",
+    "Mathlib.MeasureTheory.Integral.IntegralEqImproper",
+    "Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus",
+    "Mathlib.RingTheory.Derivation.Basic",
+    "Mathlib.RingTheory.PowerSeries.Basic",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.IntervalCases",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.LinearCombination",
+    "Mathlib.Tactic.NoncommRing",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Topology.Algebra.Polynomial",
+    "Mathlib.Topology.Order.LiminfLimsup",
+    "Std.Data.HashMap"
+  ],
+  "modules": {
+    "EinsteinExpansion": {
+      "sha256": "8a9019e680d46099b6c985426e9e28913d901736c85ea8b69ffb7d444d0bfed9",
+      "axioms": {
+        "SchwarzschildEinstein.forcing_from_parent_metric": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.sourced_linear_einstein": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "CoordinateJetTypes": {
+      "sha256": "d21fd5bfe3f2f4e7a97f6fe9659ffd00109ee653305c836c5629c4af48eb62c1",
+      "axioms": {}
+    },
+    "CoordinateJets": {
+      "sha256": "dcc622676ceed620d7bf3e5352d34cd72c3aa2014dc8e85866785782aa6a76b0",
+      "axioms": {
+        "SchwarzschildEinstein.quadratic_ricci_from_jets": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "VacuumJetGeometry": {
+      "sha256": "fa8504a4d7ddc0136b38ecd4d6d32f562ea55b59a193509aa7af74d119c191b7",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Vacuum.background_ricci_of_jets": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Vacuum.linear_ricci_of_jets": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "VacuumSeries": {
+      "sha256": "238c6066aabe65ee12a765a1e192e3b18ddb472af7ab20d7ed77a073fac97ac9",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Vacuum.ricci_lower_coefficients": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Vacuum.lower_vacuum_from_jets": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "PureOddFormulas": {
+      "sha256": "4e093636fb2e9af99bf9166cc54ec67535ade5bed1895c46c8f2ec7f30e624ab",
+      "axioms": {}
+    },
+    "MixedVectorFormulas": {
+      "sha256": "a5c35d2d86f80525b9612acbd449e4e88b3bf41cd10538e3795fc5287c5a932d",
+      "axioms": {}
+    },
+    "ParityMasterData": {
+      "sha256": "b09923f099f9739a7d8a6ecaeda21ba5e3ff3b1f4be45a7e2f60d5041c9b6314",
+      "axioms": {}
+    },
+    "PureOddRowCalculus": {
+      "sha256": "a15927941859d320cfa7d6d3f03ffbbd11e56784eae503de651771e89b808301",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.linear_derivative_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.row_derivative_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.projected_master_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.rw_parent_jet_rules": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MixedRadialFormulas": {
+      "sha256": "ef9bf05644db8be2f4d3378b49cc17b6aeb8219ef6829126ae784967ffa4678c",
+      "axioms": {}
+    },
+    "EinsteinProjection": {
+      "sha256": "932d9cb8e58f30ddae70ceed767c10eba86187e2bd6b5aa600b4ff5d63789627",
+      "axioms": {
+        "SchwarzschildEinstein.harmonic_projection": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.carrier_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.stereographic_carrier": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.schwarzschild_potential_factorization": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.schwarzschild_projected_source": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.local_source_shift": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityMasterRadial": {
+      "sha256": "bc5f44ba602a6fa1626e7f5758bd07da53e457a1b6e8fed270dcce1627a8079f",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.odd_radial_projection": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.even_radial_projection": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "PureOddAngularData": {
+      "sha256": "09d9569d4c2246560f1227fb3ad42d7145017bbf5651a1f96167952e3e9a7ba0",
+      "axioms": {}
+    },
+    "MixedAngularData": {
+      "sha256": "96a78677511643448d7f4bdc36f80622eecbf14e2f03a99f2db96ee52867a102",
+      "axioms": {}
+    },
+    "VacuumAngularData": {
+      "sha256": "3c6bed3c45fefcc820a3203302ea086deb20eb77777ce66ded6bbd0ea203197d",
+      "axioms": {}
+    },
+    "ParityMasterAngular": {
+      "sha256": "33b816a4cfcb48582a2f255c5119a24ae4326afc3545b494ad31ab8f0c64a3ef",
+      "axioms": {}
+    },
+    "ParityMasterReadouts": {
+      "sha256": "e83578b6ebe51b39ad89a383293ef9fcb505ab01041f016739a57506894416f0",
+      "axioms": {}
+    },
+    "ParityMasterReadoutsCheckedPolarTime": {
+      "sha256": "2724f0c6bd60287178cf22b08b28065ab5344636e6a0e5545884bba890bed3d0",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.polar_time_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityMasterReadoutsCheckedPolarRadius": {
+      "sha256": "b18c7b4de14d9e596d219569695a919afbdb1162aa46513e6f3a37c9afc2e9bf",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.polar_radius_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityMasterReadoutsCheckedPolarVector": {
+      "sha256": "d5e74de7079a48ebf238db692a5f2d9e0d23943396ccd7d54f59b6bd7f9db7bc",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.polar_vector_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityMasterReadoutsCheckedPolarTrace": {
+      "sha256": "80571906455f092084ac7d1bc27bb2e1e6a1ee8720fcf8bbe1b3546c90dcc818",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.polar_trace_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityMasterReadoutsCheckedPolarTraceFree": {
+      "sha256": "312042ce6910979c13a2beecc7f98493f192292a924ec8ec140cb3bdcaf13645",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.polar_tracefree_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityMasterReadoutsCheckedAxialTime": {
+      "sha256": "d8b6fd40c1c9c5df8dc2be48891ca483941699bb3f4e8b8f6ce20a6637f10a88",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.axial_time_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityMasterReadoutsCheckedAxialRadius": {
+      "sha256": "1de661eee6917db0d79e7128037c98b267928c73301b483cb216fdcf6f69051c",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.axial_radius_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityMasterReadoutsChecks": {
+      "sha256": "b8c749dd3e6ef22236d0c5a54c7f2471e27cfa820d15e225ca1ec82535043131",
+      "axioms": {}
+    },
+    "MixedAngularFormulaData": {
+      "sha256": "b0056d40952bd752072bad02c2cbe99d07f072b04f730131a75dbc3e98033eff",
+      "axioms": {}
+    },
+    "MixedTensorFormulas": {
+      "sha256": "666fc4b26a6aee9f0dafa989c06f1356b2f82d10efe2e8653db8bc31e2a58e7e",
+      "axioms": {}
+    },
+    "MixedSourceReadouts": {
+      "sha256": "8b6e1a6f35fda3350731c7c845cc74f813a6140f07191e20dbe9ef4c53295e3a",
+      "axioms": {}
+    },
+    "PureOddCoordinates": {
+      "sha256": "9f645640bf928eb9fceed39e00340d41de00cc05f0067cbc3ea4348fd3a8596d",
+      "axioms": {}
+    },
+    "PureOddFullAngleCoordinates": {
+      "sha256": "d296d4759347eb5da36a3d1b8c8f2bf75aaec823aa9fa186785627d5e0dfd517",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.full_angle_ricci_at_equator": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.full_angle_tensor_at_equator": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "PureOddAngularArithmetic": {
+      "sha256": "33d67dec6644fa79dd71b15cc4307d8239bab6a7298a09c1d64eb3fb9a9bd4f9",
+      "axioms": {}
+    },
+    "PureOddRadialConnection": {
+      "sha256": "7add3c258d75d48741de2d0b2ccd1cec95784a805bf350753be33439adb6bbef",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.quadratic_ricci_at": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.polar_connection_at_equator": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.polar_connection_gradient": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "PureOddAngularCalculation": {
+      "sha256": "4d30326b6914bdcf97af40345ab2976282206855beea67e6c7a4d26281b0b4e0",
+      "axioms": {}
+    },
+    "PureOddChart": {
+      "sha256": "c6376362f0f6e1b688fa0abee1531ce3a035c8efa88e36f9405e7500a2127b71",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.sphere_chart_jets": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.odd_angular_jets": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.carrier_from_mode": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.daughter_carrier_from_parent": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.schwarzschild_background_jets": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.schwarzschild_inverse_jets": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.axial_covector_from_mode": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.parent_metric_from_mode": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "PureOddAngularInputSoundness": {
+      "sha256": "c57034ef8697fbf2cdb70f84f2a8298f39a88ff126c94453588f6aee0d977888",
+      "axioms": {}
+    },
+    "MixedAngularInput": {
+      "sha256": "d09750b891a8bffa6c3bc733d4f436b34a672acc7bd9e65fe715af2d85deb2f7",
+      "axioms": {}
+    },
+    "VacuumJetEvaluation": {
+      "sha256": "448bc9afd7e5aac3a57409c0f09e10bb4bff1b63ca137bf9d428529912ee93d7",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Vacuum.evaluate_background": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Vacuum.evaluate_even": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Vacuum.evaluate_odd": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityMasterReadout": {
+      "sha256": "f536a1b132e3afa00d083a8d9c08ef8b138336b8c16607ba3d63a7691a403849",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.polar_readout_from_tensor": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.axial_readout_from_tensor": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityMasterProjection": {
+      "sha256": "aad1b89ceaf57bc4c0b94a247664dcf902d30e47cf6494aadf76017842490294",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.parity_master_equations": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.even_forcing_in_manuscript_convention": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.odd_forcing_in_manuscript_convention": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.projected_forcing_in_manuscript_convention": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.common_odd_equation_of_tensor": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityReconstructionData": {
+      "sha256": "7f6b6d51a2f52ee9267741f6a0ed6db82a1ca1e2f2237409f74d32f4abfc0813",
+      "axioms": {}
+    },
+    "ParityReconstruction": {
+      "sha256": "6dc73ac21c632f29946b6d3f16af80b072cc9f04388dccf5a491e7d51471f229",
+      "axioms": {}
+    },
+    "ParityReconstructionInverse": {
+      "sha256": "2b306501fe418c9a35e5ed9c9f980ef11b4f902b1b634ef7844b9ea717df00ae",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.sphere_of_metric": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.cross_of_metric": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.even_master_of_reconstruction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.axial_of_metric": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.odd_master_of_reconstruction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityReconstructionConservation": {
+      "sha256": "cca0e2b08007487f1abcfa4f4f72de7e8eee8d6e101e6557e05e30fe408e73e8",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.conserved_difference": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.radial_einstein_conserved": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityReconstructionResidual": {
+      "sha256": "93ef45f6a297456748ca582f2a8d283313541c1f3901427596aa493bd8f41028",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.source_difference_eq_zero": [
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.even_forcing_difference": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.conserved_residual_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityReconstructionSufficiency": {
+      "sha256": "da5a286bb3572f9ee91f71e859f7c8c2d2fa6df8552882b35681027c1b48a9ef",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.sourced_mode_reconstruction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityReconstructionAngular": {
+      "sha256": "342c7c69945221465e5c2ac602e3795f18c637bd70b3ae0cf8ba0ab08bf74209",
+      "axioms": {}
+    },
+    "ReconstructionTensorPart0Divergence": {
+      "sha256": "041c34d987611b893cd0d80c38a251fc78d4930de6df54f659affb3ab16f09d2",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.ricci_t_divergence": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorPart0Left": {
+      "sha256": "ac61cecdbf42272d91aab87fb51118a587af2b5266352609b14c85bd602cfb49",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.ricci_t_left": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorPart0Right": {
+      "sha256": "be41af33f407e2beb871aa781b86b22c48afb3bda7acb910832da5b9184cc594",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.ricci_t_right": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry00": {
+      "sha256": "8ec4b0f156cfa9ef558b5df40617ede3bacd53030b0b76e6fcb6be7d637d8126",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_tt_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry01": {
+      "sha256": "541b9bbfa3ecb631dd72901d4a4cc1a8d2ff84a25bb0ea251eabda223c349ba5",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_tr_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry02": {
+      "sha256": "041a910ed928f334aeb5ca206fcf59fe47a2001b97f842cb464a15b63350696e",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_tv_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry03": {
+      "sha256": "2b19b5cbecff8c3726d8b0bdbbcdc43be524b55ebc1084facdc6fde17c99918b",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_tq_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry10": {
+      "sha256": "10be85b2eba1132185cd62c0984175ebe07818810a65579297c3fe2efeca43ee",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_rt_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorPart1Divergence": {
+      "sha256": "20cf0b0b1f83e115fd8d41c908f0a4b2fff404d8b1253c5f6e1575014c1e718d",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.ricci_r_divergence": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorPart1Left": {
+      "sha256": "65703b962f3b00bce03ed8e90c2be6ce4e479fffb504087d854f0a7f93eb6054",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.ricci_r_left": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorPart1Right": {
+      "sha256": "800f081ae79b03ac09340a1cf7a342356a51074298fdf06799edfaf32c7bd1c5",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.ricci_r_right": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry11": {
+      "sha256": "be9cd6d4d9b728827bc9f5e2b499e5318b9954c8c7331f11014d59585c443400",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_rr_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry12": {
+      "sha256": "9ecd2714897f37d35f6a37286f12e4e02c77007de845233c33e099b4964054cf",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_rv_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry13": {
+      "sha256": "cdf38162307e8c95390c90fc4c06a7ec533c1bb861b7e4ad6133f052f44da82e",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_rq_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry20": {
+      "sha256": "82621a2223ea000f8298ff82c0f8c565095622da8247f96d819647cf3dd36630",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_vt_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry21": {
+      "sha256": "7622625ed81552d3e4c1a7a50dfd3de4ed01ccefcbd26ac8810eb40b047fb957",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_vr_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorPart2Divergence": {
+      "sha256": "c5b519c27756897b2fca5346896089b7900ceb42652bb050baaf0a9bc5f0d6ea",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.ricci_v_divergence": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorPart2Left": {
+      "sha256": "2b1293b983e13ed71ac8021388c35122c1cb3f71f89f77b1a2f3d9c6ff2694ed",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.ricci_v_left": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorPart2Right": {
+      "sha256": "9410e01ac26db0adc9513e88d0b450f90d07b3efb70ac0aa9968f56069eb8686",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.ricci_v_right": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry22": {
+      "sha256": "b6ab4fbcc25ff89790a4aa4e623427d11253566d4fa34ff17c6eeb284b001925",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_vv_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry23": {
+      "sha256": "3d374459e009ae04edc33e2b4f4a2a5a4594fc6d6ba2c262318465679466d71f",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_vq_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry30": {
+      "sha256": "823c561dc608ef5358cb89a09bf14c643418f79242725dd37840733b0684d0a5",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_qt_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry31": {
+      "sha256": "10f1bb92c9328f373e1cb41f672bb92e82b0b24f22cafed72d9775f79ea264fb",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_qr_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry32": {
+      "sha256": "cb1d017f0448e678cf7ae58b2913ded7d12dab938258308662e67190e845238a",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_qv_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorPart3Divergence": {
+      "sha256": "022f8536c565d40ce463934f02c579c6f26716642097393b5819d753c6eedd67",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.ricci_q_divergence": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorPart3Left": {
+      "sha256": "01cc53492e5e7626cd459bf3bc5731462df97123590730a22b9e40ddbf99a53a",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.ricci_q_left": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorPart3Right": {
+      "sha256": "5fafb6fe6ff9ac2b058099b65aa53451be532e1660f3efe3cdf55c0047d75c12",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.ricci_q_right": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorCheckedEntry33": {
+      "sha256": "8043b182af76d81210e81ed83523e244395e4b89cd9ee7b22b4ad1c4d949f44e",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.entry_qq_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReconstructionTensorChecks": {
+      "sha256": "2ae797ecb1cab7a6111e1b56ab73817e7f5dd650cc89b668ac49399cb30cb231",
+      "axioms": {}
+    },
+    "ParityReconstructionGeometry": {
+      "sha256": "d063510a1d1d49153729c086078727e9baf8926d894a77842b6f0982a4151127",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.full_angle_einstein_of_mode": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ParityReconstructionTheorem": {
+      "sha256": "8241c3215aa08193b1403a5a6a33835b874698c4eed0a0aeb6c75283ba447e34",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.sourced_einstein_reconstruction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticOrbitData": {
+      "sha256": "bc290c3f8acea6d3fc58c260d210006fbe041881d520e136cca690bd9bf85451",
+      "axioms": {}
+    },
+    "EvenCurvatureTerms": {
+      "sha256": "699e01660682b0c3d0692d97050ab64e0c23bd871820e7660cbca324176fd6c9",
+      "axioms": {}
+    },
+    "EvenCurvatureTable": {
+      "sha256": "3bcd1a1f25e822bea885316550ca61b719dc6b74cd810e7a0542427ec0b30b7f",
+      "axioms": {}
+    },
+    "EvenRadialFormulas": {
+      "sha256": "27d0bbb8999a8eaa6086039c93aa8fe1ffca0db051484a71f513fd85a1ff84bb",
+      "axioms": {}
+    },
+    "QuadraticConservationRows": {
+      "sha256": "b860b5b22b8faa1654b53bcc56a92b0f1fb43b427d806f74c76c1ef34b0b085e",
+      "axioms": {}
+    },
+    "MixedRadialCalculus": {
+      "sha256": "f91628343fe33f3137b70cf458e1b2fee4516da54e1f83e0074ac4696d4ac5ef",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Mixed.polar_reconstruction_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Mixed.bare_mixed_rows_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticScatteringSource": {
+      "sha256": "76757c84c04ebcbe232f674e05d560760077b25566996ec7f64ad5435e29696f",
+      "axioms": {}
+    },
+    "MixtureCoefficientData": {
+      "sha256": "caa29ade06ae6e440f3ccb87151bd8a82f83028a872bc258ccdaddcb73c15f6a",
+      "axioms": {}
+    },
+    "ExactRationalData": {
+      "sha256": "7cccf9d67d75995d117a3f92fe8d3e8042f90f4577bb840831b508cf01d9efe5",
+      "axioms": {}
+    },
+    "PureOddProgram": {
+      "sha256": "c90af2dbab08d6d99e356abf4c2bd86f033d04201731b147e93033e4033007d6",
+      "axioms": {}
+    },
+    "MixedProgram": {
+      "sha256": "9de78e75d5dc48111e114cd08a015d6a5112080e159e4f889fad35bfd14064c4",
+      "axioms": {}
+    },
+    "EvenProgram": {
+      "sha256": "0b0cf4504d215a68f668e5827e16624885104cd950659c4d24a96cc5544a5c9b",
+      "axioms": {}
+    },
+    "QuadraticConservationExport": {
+      "sha256": "2dc10440073bdd1ff89b148ba3aee5f620ded47f32c2c5879fab20ca47a1118b",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic000": {
+      "sha256": "b0570c0920c939f2e927780094fce71735d3e1a2201f4004a42208294007b8ad",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic001": {
+      "sha256": "ac00c078c0dcfa698c1e45786315ff5f2e2d511c228b2775cf4273a7927b843c",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic002": {
+      "sha256": "136e21435cba2078855e8c2c39afe1034d1b42d9351d5828dc8dd9f378625b01",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic003": {
+      "sha256": "352f766a338fe1c53e1990c56a77fa4117475979bff9c8571c3c9323a1b600f5",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic004": {
+      "sha256": "d4774ae5f0e6366f1966ec779afac45908a7d032d4d741b09734c8497bbfd4e2",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic005": {
+      "sha256": "3d12152a7375ed9343b974b7d2d9409c18f8ddd78942bda75c5255d03988099b",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic006": {
+      "sha256": "855d0232ddf4f6aaf9be64017d4fb938dcc117f86d4e3ca19e711a850e639881",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic007": {
+      "sha256": "56c24ebfc74ee9a6e18117d754d54782afb50967c0b3454707451404c5f1c93b",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic008": {
+      "sha256": "75dfffada60877e1f8b52a5332e58056531937912e5df1e819eb71e7b5a538f9",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic009": {
+      "sha256": "844bbe99bdb2da552a66855509259fd82ac0822b2677cf8ad35110261d80a2a1",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic010": {
+      "sha256": "a5128479f9b9bce94b5a5edf7e2376a15a4a10038e385a47edb1752fe8a2f8d8",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic011": {
+      "sha256": "a622dbb444deadd061f67f1a48baf09e5c80c5e2425d53a63b583d9af6f08e22",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic012": {
+      "sha256": "37bc5098ed8a06678fb7249703688b591e85aec8164773125caa4d066950a6d6",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic013": {
+      "sha256": "e6142fc944415ed08f4060af9895f282437082857de21cc3a8f1d3abf2ed4bcf",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic014": {
+      "sha256": "a3df3ba4fd3977f9d947e8b1a9053f42d0f046b6b188c791a4241c7bb7fed185",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic015": {
+      "sha256": "9df7c996c1276a37e543435ddc2f9b31536fb30108f44f7628e4748491cf005b",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic016": {
+      "sha256": "28a33928f7b33c56031519ac5bc7c6f218bb4e0ff9eb247c3ab2f709dbc70044",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic017": {
+      "sha256": "6c6879b026f3b10af2f5e8beeb11f0e7f6e57ed28a2969e7d3c8eb28509cb8dd",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic018": {
+      "sha256": "55d46f76d771882aae2341f44367ed62a7b3e3b030fde0d80c7d65a56752c859",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic019": {
+      "sha256": "09d4ce86c646da27593912a6090e81803fcc5eec79c8ef0bf84c0b5348c8d3ad",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic020": {
+      "sha256": "9c798ccd9080e0bc571e718c1bfa37fbcb20e30cd1ec378f7bbf5cf38075303b",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic021": {
+      "sha256": "a882c50b7f74feb0363b6f44c6d3f81c56d54ad71db4333910e67df57ca1b2b0",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic022": {
+      "sha256": "2b8285fa2ff07918f55c486754ff9b32e01b2a57ab93c20f502abbc62136fb2f",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic023": {
+      "sha256": "58e8956d901b58cb464d1849cd3e87e5ec14d824316bfe0e6e509762d2dec1cb",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic024": {
+      "sha256": "e1f9ba4dd22e776ffb01c1f47bc1a92a355903590b227fd46ba31e441bc75eab",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic025": {
+      "sha256": "807d5690d43835571736b4959e703fef821ce4531f2d6e292f81d9fb0d4994b7",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic026": {
+      "sha256": "fe37ec8786c0cf04fbba862222d8b767e863b21542abf67ddb07a0843c9389b3",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic027": {
+      "sha256": "e4cdd3e7a7b3f75dd1e002a8d119b22bf4627f4fcd0cb3f600fd54945502ba1b",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic028": {
+      "sha256": "4c30e32cb2d8dee2461fbe2165264a87b6f51fc49c68fe6cab91b667212879fb",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic029": {
+      "sha256": "42f93834de96a644b322c1d43de3d473e815584e7506cba9f371f0d8b9616c06",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic030": {
+      "sha256": "ee149cb7d9d297fc944f3674810e6fbfb55066ac3ba17bfd30f0425663e66fb3",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic031": {
+      "sha256": "d385ae64b31cee2c41ae5a23a163b2239c293af12aed8c02b7abd8f6106d2b66",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic032": {
+      "sha256": "d0886761548ccb69837c6044f493959193d9a39816956e5468fde5015074f7c1",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic033": {
+      "sha256": "a714d0ae259e6fd16eef573b0e00b589cd5806a349a7fb772c847fb3f9e724ee",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic034": {
+      "sha256": "5774ca763e8df7b2fed7fd3ff85dc20b2a46cb5790b96aa2a0d54b48b1cbddc1",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic035": {
+      "sha256": "4e6c4590f49291b916a0aee4577eb1afed04785e5376c113675eac3330adadc6",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic036": {
+      "sha256": "37ca0c845857ddb989db10099afe0793952209fd7f11453ec147f9f51676fa30",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic037": {
+      "sha256": "79d93ea9a488f067567a8bd827cd74f0217bf2d05e24d1b6140407a1c6f7e3f3",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic038": {
+      "sha256": "51d77bf609fe6745700c3ac9bac192e11f28dfeb6624ba33baa36e14f4f2da3a",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic039": {
+      "sha256": "916a7ae17c643a7f2dc21a809b30a6efdd69f3c39c4dbff61e90fbd6f068c579",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic040": {
+      "sha256": "f8d37660ea0fa0861fdf2e6ea3dbc50a905587a7757dcd85e43d491286eae7a6",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic041": {
+      "sha256": "06107d5328d1fbccce95871ed6035367e5391d7ba632675d17e627239f166454",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic042": {
+      "sha256": "db708d4317d543b9305031072d31da801a41fb1e5b52e9726a51edfafc01f063",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic043": {
+      "sha256": "2f90d1b7782fb339c068304e710aa2157624a7800632958774100c97ff1c959a",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic044": {
+      "sha256": "06484c73b04685a93adea6d52ad901112dd2f0e80154fd71da01a18295995fa5",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic045": {
+      "sha256": "86e90b9c85384f4013f8f1ea6ef3de857ec50a7e2e60c5b71ec00a41d21061da",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic046": {
+      "sha256": "e8e13b1c1cba6e614915505bd702e9482d856628e640d3414a0e1a3ca748bc09",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic047": {
+      "sha256": "bb21b277c85a0597a8f9e209403e6aa75b4436d14769b113383604da541b758c",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic048": {
+      "sha256": "d727f6f5d58bc2f3df77493a59a5a57a023ff68344a9e460c5c4d3a99b9c5b35",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic049": {
+      "sha256": "68db6709022ce53fa362077bd3796013a00fafbf0acf18880f28d36f422d3bc7",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic050": {
+      "sha256": "fd2ff319d9b9794baed603020d4c79b7d3cd3705f470fa7a356c27089601903e",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic051": {
+      "sha256": "e595652770c1b59406ad623be0f9b5951973168d4b53155e2308e6de8eb553cf",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic052": {
+      "sha256": "5b107ad9f94428562a8a7007be71c692f86c9b59b6a79d94efcd16f5ef2dbf43",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic053": {
+      "sha256": "aa686cbedde8bc2cc7c5c64fd6bdd0123dde9301579d2c8d9f3de4beda1eee10",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic054": {
+      "sha256": "6d05faf3e56d70b4c84710439230a614430e0292d879d2f96f6752413c7a322f",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic055": {
+      "sha256": "782ddc26cd2850b09675ff5cf6f2cd5ab115a81cf0c8008f986dcfaf32451ddf",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic056": {
+      "sha256": "e3b22e349e4be4c1d32eb5f3b7a285378c89176dcfd5da8687d65d5931e9aa1b",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic057": {
+      "sha256": "5b6ee4b33d3523457b62df69f765105e258c74ce9e7cf672c8c6cdf639eb1cc3",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic058": {
+      "sha256": "67b0b00af0f4ed78de4c3cb54e1cd166303fdcbf8e68b476399e31d1e0a8ee11",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic059": {
+      "sha256": "09407cdb5be83a18606e00157f43175fa19bb9b9bf53b9db5c08e2d1de8b0155",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic060": {
+      "sha256": "431330e9d08ed3532941c2a3c34e7d2d106c3cb3e5e4e9fc3989f258a6ce91eb",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic061": {
+      "sha256": "0115a31c498e392e8da31ca459380cc327c5e5330860d9d216f3881e7e415fe4",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic062": {
+      "sha256": "39cd2765c0eeae0a47b289263c6e6f0be804c39353672a929e6d1a5da66d40d2",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic063": {
+      "sha256": "c0885c99905373b7ffdf9e09a0bc591de0d6ee742638ccc271f18cc018a8fdd9",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic064": {
+      "sha256": "006cb9388c922fc016f6948bbfa15f6a71eb12904940323bc3365732fbceb7c3",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic065": {
+      "sha256": "63613e248e065de3e10389580205acdcf658329117b52eddffbfe453177ddf40",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic066": {
+      "sha256": "3163c81e1e1853b00a5c7303287fc75015edc9471b73f48c4b837cf8673f9631",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic067": {
+      "sha256": "4a3aac8b3675f0fc590cffa7d344d71dfba69b08b4522a7d83c3b9dad3ff2046",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic068": {
+      "sha256": "c3717cc8365dd3ab90937435784811075b53e9c9f20ba2cb2d126da5f2b0d93c",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic069": {
+      "sha256": "aa1a869b3d7245b683ba4a5a4aeb169f7b0d4a136fdd2fe2e9d14c03c50ab9d0",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic070": {
+      "sha256": "4a1bf4ab1d8cae2188e290b3a6ec98827d441425c031d3f537463f4ab107103e",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic071": {
+      "sha256": "6b2f3c597f02ef11cd4814ce252b881170bd9b09f73f3aea459e08a4c8ca0c89",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic072": {
+      "sha256": "73a41921f88de56c8fe6ddfe7bec85e4ffd96646251830a4078043e6c6c8f23c",
+      "axioms": {}
+    },
+    "QuadraticConservationArithmetic073": {
+      "sha256": "329bbd2007d2423dd5edb79e20cf52cb511200fa6e465be57769fa7f97900226",
+      "axioms": {}
+    },
+    "VacuumRadialData": {
+      "sha256": "f15bde767d1aa5cc774b0df647f92dcb0ec2a70afc20838ad27ac346d887802a",
+      "axioms": {}
+    },
+    "QuadraticConservationZeroEvenTimeSquare": {
+      "sha256": "194653c1de0d35ff4e59430fa926b452bec571a90ce7910cf88fa0bc6c9d666d",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroEvenTimeSquare": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroEvenTimeCross": {
+      "sha256": "cfa92df08861412c51b133594d1d9a431110c094c3d1cf3651ab9d3513e44b41",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroEvenTimeCross": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroEvenTimeDerivativeSquare": {
+      "sha256": "3cf4b293f211d7e29b135e13fd3cba69337c4d45c541b8e1c07e1e117096bbf4",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroEvenTimeDerivativeSquare": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroEvenRadiusSquare": {
+      "sha256": "59ebf727e319fd56fc4a1b18a1a71791526066643ba73e6b8bf641bcf56194a2",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroEvenRadiusSquare": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroEvenRadiusCross": {
+      "sha256": "ded438444ed90c022b5559bbd9a59f64fda7846ddc59048d721e9cd18ebc9808",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroEvenRadiusCross": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroEvenRadiusDerivativeSquare": {
+      "sha256": "2964c6776353641b56a4489ea66f17479461d1441ba114a69b52eae595e05bbb",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroEvenRadiusDerivativeSquare": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroEvenAngularSquare": {
+      "sha256": "68d0e8a55ebbc5eef162206142803be9115aa04e368ea0d6029c22afd0a80b80",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroEvenAngularSquare": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroEvenAngularCross": {
+      "sha256": "939cdd69db600c711f98403e86841b9d48daf8ccf332470bd1882c1ee1b1ba65",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroEvenAngularCross": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroEvenAngularDerivativeSquare": {
+      "sha256": "ec87653ac1e7d787bc8d77bb19a46bf9009ffe46b70a4bb6f3842a02d216e7da",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroEvenAngularDerivativeSquare": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroOddTimeSquare": {
+      "sha256": "8675a088976f636f7a1f28aacd8000bf8e47e33f05783f0e7e2d1e30d367d91e",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroOddTimeSquare": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroOddTimeCross": {
+      "sha256": "cbc53ec90a6ed265686dec40bee97638bebb8b58407fc9beaa433db33792cf05",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroOddTimeCross": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroOddTimeDerivativeSquare": {
+      "sha256": "eb66c76a63213183da72dfaab0ab6fd409712ebe07e920e71baf6f4ad348b54b",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroOddTimeDerivativeSquare": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroOddRadiusSquare": {
+      "sha256": "fb84f97fc421b1db15e28b4bcac120525ac744743abc359067cd4c1f151dc3c9",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroOddRadiusSquare": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroOddRadiusCross": {
+      "sha256": "055d468131f71fe618576d31f0bde34137de4870b0d7009b7816c0d389828692",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroOddRadiusCross": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroOddRadiusDerivativeSquare": {
+      "sha256": "657e2dc2298489c613c8f7389a3e63a1b80af189bbb0375334bfdf320d373481",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroOddRadiusDerivativeSquare": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroOddAngularSquare": {
+      "sha256": "66a48d4040c983e2b3e718b77e1cf9814bf9b3cb5f9c1b486f3a7e469bf6eadd",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroOddAngularSquare": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroOddAngularCross": {
+      "sha256": "c68bc4a7aea237d4ce3941441c891c8bfa62a32b5e4897e97cbe223dbc17d023",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroOddAngularCross": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationZeroOddAngularDerivativeSquare": {
+      "sha256": "2f0ae729d0f7516b8988462b86b27a1f5358180a623596ffe49ce8e0173f2f7c",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.zeroOddAngularDerivativeSquare": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationWitnesses": {
+      "sha256": "96e642dbe3ef39adfdcbd3d6bbf16bcc66fbee1f1b191e37e9b3a4d040cdfaeb",
+      "axioms": {}
+    },
+    "PureOddFormulaEvaluation": {
+      "sha256": "37619d525630c1b7a3139b71b8446932717795797ea51fd1a7b33e7a90d81d50",
+      "axioms": {
+        "SchwarzschildMixtures.PureOddProgram.program_value": [
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MixedFormulaEvaluation": {
+      "sha256": "324228dca88b0e0cf3d332356c483a31770220fc6aa7a1d72144ddc897837b54",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Mixed.mixed_program_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "EvenFormulaEvaluation": {
+      "sha256": "9f9616158072b89c7f68ff6fcaf0142b5ccde9b94acceea08a54bb7d16bbe4c7",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Polar.even_program_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MixturePolynomials": {
+      "sha256": "891efdf2738c462a8e24ad31e7f4a010defbb22629c98b2c316ead4e7107a5ba",
+      "axioms": {}
+    },
+    "MixtureIntegerEncoding": {
+      "sha256": "422981d34d017a54e0959bb8fa979276266f81ff8c191c42004d598da532e269",
+      "axioms": {}
+    },
+    "MixturePolynomialCertificate": {
+      "sha256": "bde73a6a7764e98396407f230215bffa06ae4b10a4e3847b8578112cf6ee15d1",
+      "axioms": {}
+    },
+    "LaurentBounds": {
+      "sha256": "2bfcc202a544d30c80d404bf621d25e60d95d38d9eac157d591071e8e349604f",
+      "axioms": {
+        "SchwarzschildLaurent.ordinary_pole_forces_leading_term": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.horizon_no_pole": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.origin_pole_resonances": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.infinity_two_equations": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RationalLaurent": {
+      "sha256": "d89f5d4b8108d363295a9b5bfc4517d7d3fdd5a24d1b8093a0d6b7c6be8d7371",
+      "axioms": {
+        "SchwarzschildLaurent.rationalDerivative_fraction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.euler_twice_fraction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.bounded_laurent_expansion": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RationalCalculus": {
+      "sha256": "774d84538311428f92131cdea2a61653cebb2d577f3094c2615428d037de215d",
+      "axioms": {
+        "SchwarzschildLaurent.rationalDerivative_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.rationalDerivative_mul": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.rationalDerivative_aeval": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ExactRationalSoundness": {
+      "sha256": "f53810b780f128c25ade217ac6da6bf8b8e164a891ad18e04e6a6b6e09ca734a",
+      "axioms": {
+        "SchwarzschildMixtures.ExactRational.Reduced.sound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "PureOddPhysicalDomain": {
+      "sha256": "b10539786ce6c47d886957602cd3bbf7680585bf10796c6a75a43eafd0f5a309",
+      "axioms": {
+        "SchwarzschildMixtures.PureOddProgram.physical_divisors_nonzero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "VacuumRadialSoundness": {
+      "sha256": "ad914be979d2743755ca3cc45b6bc7e1d5938d6be9292c46d1ddfb58990017f8",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Vacuum.interpreted_coefficient": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Vacuum.radial_coefficient_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticConservationEvaluation": {
+      "sha256": "4d4aedbbb570ad639de8ce382bf055e530109295a5a7edc0d2953e0d2d3be87d",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.polar_conservation_coefficients_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MixedConservationRows": {
+      "sha256": "e3bc63aa6ad922729e15b1757cc47925f64a76a5e341202e8593b99aed85341b",
+      "axioms": {}
+    },
+    "MixedConservationCalculus": {
+      "sha256": "bc3501424602d04f32c6e7091b5dffa9bea25dbfe3f11ce0055ee862dd6a5897",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Mixed.conservation_rows_on_parent": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MixedConservationFormulaEvaluation": {
+      "sha256": "a9b039f0e4ff2ab1c82859aecad54f7233017eb9a2ee0edc3b883ea852e4426b",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Mixed.conservation_program_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ConservationWitness000": {
+      "sha256": "70c3bb0c69ec927f6b6bc85d29cb396bb78b2bb4ea9381d7c87bd38656019729",
+      "axioms": {}
+    },
+    "ConservationWitness001": {
+      "sha256": "1784f4b1fb21e36a76d7f3f1cfc9ab70143e20e8b6c85d7d35facf2a31a3b9ba",
+      "axioms": {}
+    },
+    "ConservationWitness002": {
+      "sha256": "3027630b4b5d90344dc54c5d7aaf0900984376f884fd752303f10944add38716",
+      "axioms": {}
+    },
+    "ConservationWitness003": {
+      "sha256": "b867be89703f6c5148ad4abc8924215981edb50f497efa83eb575e0fe22ce56b",
+      "axioms": {}
+    },
+    "ConservationWitness004": {
+      "sha256": "3213d9fec23b565553bd4fc124f3b18db889fd764aadf038a4a70aab5cd531f0",
+      "axioms": {}
+    },
+    "ConservationWitness005": {
+      "sha256": "a6ee07c6f6dcea31c872482e6a9593daf3deb66098d0fa59e235283b6fda0e4a",
+      "axioms": {}
+    },
+    "ConservationWitness006": {
+      "sha256": "c73708d961f71ac35d0a56bddfd3ac80f971ea9c385fdb0221ce264c3559d18e",
+      "axioms": {}
+    },
+    "ConservationWitness007": {
+      "sha256": "6583381ada9439c0c5db7a9942682943ff4d6265c61675ebc445796464ea0aa8",
+      "axioms": {}
+    },
+    "ConservationWitness008": {
+      "sha256": "129044f7e20b606b75b2904b0fc17e9e8f56e0a98c00bf7456502d170bda5af6",
+      "axioms": {}
+    },
+    "ConservationWitness009": {
+      "sha256": "f1ddc03bc268f40a2952dcfa6a75dec3857b84c24352eacfe338b4031bca5915",
+      "axioms": {}
+    },
+    "ConservationWitness010": {
+      "sha256": "f8dd1a0c532b85cdcc547184bbfce06d40258ede0bb42ade73ff004cff247aeb",
+      "axioms": {}
+    },
+    "ConservationWitness011": {
+      "sha256": "2d4a82434630aefa9ac388cb4bf70196b949ba925619db9baef4f760590a540a",
+      "axioms": {}
+    },
+    "ConservationWitness012": {
+      "sha256": "5e14ee14b497cc67f3542868582523b046271292a82f4cc201f72415f2d2c559",
+      "axioms": {}
+    },
+    "ConservationWitness013": {
+      "sha256": "56339b9f99bf3be9ba06db95d31ffe415ca4dce16b4f33f6f9f6279ee3e10bc0",
+      "axioms": {}
+    },
+    "ConservationWitness014": {
+      "sha256": "909a8d68b4b255000ce66c16160d8a5c97ae57ef83d9765868c6997fb9140eb1",
+      "axioms": {}
+    },
+    "ConservationWitness015": {
+      "sha256": "d8a1609301d9dc5a6c6333a2f1a11afeda8997e134adb6cb95137339cb2dac34",
+      "axioms": {}
+    },
+    "ConservationWitness016": {
+      "sha256": "4920f4391dd506eed8c1679f2f4f994efa017dd9e7a5bfb2f404d7c40b48420d",
+      "axioms": {}
+    },
+    "ConservationWitness017": {
+      "sha256": "51eecaeea7e76c8d1733b240e34125dea7825dae4314af8bb3c1052d91adc442",
+      "axioms": {}
+    },
+    "ConservationWitness018": {
+      "sha256": "485b11c648b450211a509e3aa92dca147fefba5df60cc0fac81e91a9dc56e797",
+      "axioms": {}
+    },
+    "ConservationWitness019": {
+      "sha256": "73003ee553b0131eb22a0b2467f14342a5e313e56ee530aff9a4cfe2e3914997",
+      "axioms": {}
+    },
+    "ConservationWitness020": {
+      "sha256": "383f0843c02eaeccf9d0efa7ea61be8cb9ffaf4ca3d85eb4289e31b371638df0",
+      "axioms": {}
+    },
+    "ConservationWitness021": {
+      "sha256": "0940759092c414a947dbbee4b38d5d5fba961a281dfc177b8142a2ef9eccc41a",
+      "axioms": {}
+    },
+    "ConservationWitnessA": {
+      "sha256": "4a6e758865b76c60114ecc8c648e066610523fc274edeb89cad5d9ca0df63ec7",
+      "axioms": {
+        "SchwarzschildMixtures.MixedConservationWitness.reducedA": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.MixedConservationWitness.numeratorA": []
+      }
+    },
+    "ConservationWitnessB": {
+      "sha256": "c81a1a989e755560a857e431f3e5c6fc39fc0a347441b5bfa51bafb79a43f318",
+      "axioms": {
+        "SchwarzschildMixtures.MixedConservationWitness.reducedB": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.MixedConservationWitness.numeratorB": []
+      }
+    },
+    "ConservationWitnessC": {
+      "sha256": "6a6c14943ed30fd0900d904902021ba259cef6955ac14efc2e6c52f79641650c",
+      "axioms": {
+        "SchwarzschildMixtures.MixedConservationWitness.reducedC": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.MixedConservationWitness.numeratorC": []
+      }
+    },
+    "MixedConservationWitness": {
+      "sha256": "3c1d3b190aa70b68aa314fe4c439d0f5c01e2162cefe270abfdc416e02849a95",
+      "axioms": {}
+    },
+    "MixedConservationCoefficients": {
+      "sha256": "df92755dbdf14e14f5f599edab35f68a3d1a7d9c156fb752d09b79c6fc1841f8",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Mixed.conservation_coefficients_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Mixed.conservation_rows_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MixedConservation": {
+      "sha256": "daeaf5b1ac7e6a114116277fd96d614559bf41f59c5d7ac940bdf4960f86684f",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Mixed.mixed_conservation_on_rw_parent": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticSourceConservation": {
+      "sha256": "c367b46ec44fcb3a2010c718417c7abf75874481b33e8112b34db47c00b4fc64",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.quadratic_scattering_sectors_conserved": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticScatteringReconstruction": {
+      "sha256": "e317b2c32943cfb869e578f58b311787a321d271ec5d6887dd78f784ddcd3834",
+      "axioms": {
+        "SchwarzschildEinstein.PureOdd.Master.bare_scattering_source_conserved": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildEinstein.PureOdd.Master.bare_scattering_einstein_reconstruction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricSourcePrograms": {
+      "sha256": "b78ed7affbb1cae7b84207d402dfacff617ae11b6a26029b95709345cc10439c",
+      "axioms": {}
+    },
+    "PureOddEvaluation": {
+      "sha256": "6be2a64a86ab61c132c2467f4f451bd3d64cd24166ab773dcaa65c0242702c68",
+      "axioms": {
+        "SchwarzschildMixtures.PureOddProgram.certified_radial_coefficients": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LaurentOperatorBounds": {
+      "sha256": "b3872897c2a6ac79255543436b9a08bb657de45b2445cb871c1971e560c8854f",
+      "axioms": {
+        "SchwarzschildLaurent.ordinary_bound_from_residual": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.origin_bound_from_residual": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.horizon_bound_from_residual": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LaurentInfinityBounds": {
+      "sha256": "1128b23afd956f4adfb4d582b01bf15855dd249372078f21faeac22e3eda1bd0",
+      "axioms": {
+        "SchwarzschildLaurent.infinity_degree_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LaurentReduction": {
+      "sha256": "7a1415324016118cd3a4fe427a2f407f5b6c4379b9a64eb18274b6e69f7bf350",
+      "axioms": {
+        "SchwarzschildLaurent.normalize_at_finite_point": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.finite_pole_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.matrix_basis_span": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.normalize_at_infinity": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.matrix_span_from_normalized_equations": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RationalRowOperator": {
+      "sha256": "d8669be82646f2f0fece1470a77ee8625c702b0b38a7ac1a0733d96391db487d",
+      "axioms": {
+        "SchwarzschildLaurent.rationalStep_physical": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.cleared_operator_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.unscaled_operator_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ReciprocalOperator": {
+      "sha256": "a19a2577d989f32d7f0fdb0e405f3b15dd795b8e590095f8da7ee5d401c6a924",
+      "axioms": {
+        "SchwarzschildLaurent.derivative_reciprocal": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.reciprocal_operator_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "NormalizedRowOperator": {
+      "sha256": "31d14204d6df1098dc1632ddcc19bb81647b80a20b8325702e11436caef81c85",
+      "axioms": {
+        "SchwarzschildLaurent.ordinaryResidual_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.originResidual_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.horizonResidual_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.infinityResidual_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "AdmittedMixtureOperator": {
+      "sha256": "8e1a864c9de772a9c9de732ec306cddfed553ed2d78d74554adf2dd254ed91f3",
+      "axioms": {}
+    },
+    "AdmittedMixtureNumerators": {
+      "sha256": "c79ab44c75282e8ca12709b330426a06f3d250d005dbcb001d277ec237abf5a6",
+      "axioms": {}
+    },
+    "RationalSourceReduction": {
+      "sha256": "17c3c1d007cb1d2c44627712b06fb4a42be624a24f51a5e161f292751805bde0",
+      "axioms": {
+        "SchwarzschildLaurent.finiteEquations_of_rational": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.infinityEquation_of_rational": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.matrix_span_from_rational_row": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LaurentEmbedding": {
+      "sha256": "18230e13f4e94b750f7cc0145820d2c370b63964395a2e932bb009119e7c6630",
+      "axioms": {
+        "SchwarzschildLaurent.laurentToRat_injective": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.rationalDerivative_radius_zpow": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RationalLocalValues": {
+      "sha256": "55b62bb0e11011dc2dc5c604e492c653cae404c05c17bbc49532408d66880e81",
+      "axioms": {
+        "SchwarzschildLaurent.RadiusValue.denom_ne_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.leading_at_finite": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.zero_power_of_nonzero_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.radiusValue_of_reciprocal_polynomial": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "AdmittedMixtureDomain": {
+      "sha256": "0ad1142ece7ea75eae6192ffd298b7006eca3fb2304dcc72b22532cc76a6e168",
+      "axioms": {}
+    },
+    "MetricSourceEvaluation": {
+      "sha256": "7bbb4b0d9d4989fd063627a97e959a4dda85ac7018723beb78ae47a8a9a2111f",
+      "axioms": {
+        "SchwarzschildMixtures.metric_first_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.metric_difference_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "AdmittedMixtureField": {
+      "sha256": "c555db726c72705aa903e31f8694fd95c0303b18728810567243839922aab20c",
+      "axioms": {}
+    },
+    "MetricBareDenominatorData": {
+      "sha256": "5e5344f7b3283ad8ee440b4bd9d7b52fe22de032d1c99775f51c9d3d4c442388",
+      "axioms": {}
+    },
+    "MetricBareFinishData": {
+      "sha256": "9489ac7591bf89d1a248a80e55ed4b28c2c3ec212b6eef16ec50b41baac9294d",
+      "axioms": {}
+    },
+    "MetricBareDenominator": {
+      "sha256": "1c8f50dcae53457e6381bf95ace8bc960358185d5e4e1d3a85313c873e574049",
+      "axioms": {
+        "SchwarzschildMixtures.checked_bare_field": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricBareFirst": {
+      "sha256": "28b5f92beb970c605a496d33c1bdba50e4e8314cf6ec7fed42087d236e4b2e5b",
+      "axioms": {}
+    },
+    "MetricBareFirstCheckedStepA": {
+      "sha256": "10b1e71fdbc0935a64ae150d228bb89e4a455fedc9d5011cf032e97bb1dfc69e",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareFirst.step_a_checked": []
+      }
+    },
+    "MetricBareFirstCheckedStepB": {
+      "sha256": "796cca1aa20737ad430e094be09e749cfc6c1f03a7e0343b6d2e3d5d3fefc5d1",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareFirst.step_b_checked": []
+      }
+    },
+    "MetricBareFirstCheckedStepC": {
+      "sha256": "cc1b01e9ddb9a384676c32680ecd8fc4dbbc9b0fb2aeacee85d556bf5638c2f3",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareFirst.step_c_checked": []
+      }
+    },
+    "MetricBareFirstCheckedA": {
+      "sha256": "8a249adc210d70bf718ca0f5e56bf1f82268c111e794abecc5a146c0f28e0a6b",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareFirst.source_a_checked": []
+      }
+    },
+    "MetricBareFirstCheckedB": {
+      "sha256": "428285293070ffa76b933b433313d090d0a4a7ed3436f70d03fa6183ff72e729",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareFirst.source_b_checked": []
+      }
+    },
+    "MetricBareFirstCheckedC": {
+      "sha256": "0a87657a025496473969f811fce2166524e3e2aa6bb90b5489141280fa32305c",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareFirst.source_c_checked": []
+      }
+    },
+    "MetricBareFirstChecks": {
+      "sha256": "76c4d5177ec6906ffe941eade3d333b5d8cdc525c26920bcd7f87c181530168f",
+      "axioms": {}
+    },
+    "MetricBareDifference": {
+      "sha256": "ac4cd7d0340d02fc7ddd6492d33b117f6b8de001fd1e4a65be4e15d858baf7f7",
+      "axioms": {}
+    },
+    "MetricBareDifferenceCheckedStepA": {
+      "sha256": "4c4a2949877f1ccf2d16f62e6617329f4c3440828a0e2d160542f3fb0557ba15",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareDifference.step_a_checked": []
+      }
+    },
+    "MetricBareDifferenceCheckedStepB": {
+      "sha256": "aaa6529b36b342ef484a8ce6760c6ff98632374801a8616f960884076ba804ac",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareDifference.step_b_checked": []
+      }
+    },
+    "MetricBareDifferenceCheckedStepC": {
+      "sha256": "cd31a9895b1820839b71877c6eb83d5e0bef2d6c2a22b2efa3e9862a9b951168",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareDifference.step_c_checked": []
+      }
+    },
+    "MetricBareDifferenceCheckedSecondA": {
+      "sha256": "415fc68d2c52c9c883f816978bc57b16ec38f090446052776bb645abdeeb73fd",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareDifference.second_a_checked": []
+      }
+    },
+    "MetricBareDifferenceCheckedSecondB": {
+      "sha256": "7e5ade6491c65520881306caf1aebc0dd89d4bb0a1ec8689e68a212bf5c882d2",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareDifference.second_b_checked": []
+      }
+    },
+    "MetricBareDifferenceCheckedSecondC": {
+      "sha256": "b717fe3e8c664e9a5bb59905e4fe4fa81fb82a1b9c1e0fe041aae75e44d4111c",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareDifference.second_c_checked": []
+      }
+    },
+    "MetricBareDifferenceCheckedA": {
+      "sha256": "1dc1369b09c0ecde306fe3317691246d1b638b653528378d951ae35dc1b8f7cb",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareDifference.source_a_checked": []
+      }
+    },
+    "MetricBareDifferenceCheckedB": {
+      "sha256": "6201af2e3dcd9eb9470fc2bc11de5e60e1cb90c716fed060ae3057f8046873ec",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareDifference.source_b_checked": []
+      }
+    },
+    "MetricBareDifferenceCheckedC": {
+      "sha256": "c33a29746a1ead1ff712379e1bbeba2795acd09549b2d03954b4bb342f31cc42",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareDifference.source_c_checked": []
+      }
+    },
+    "MetricBareDifferenceChecks": {
+      "sha256": "69beb7340267f70f6a1df03db966c3d2e2b85fbed78aafdb81d3c4072ca0729f",
+      "axioms": {}
+    },
+    "MetricWitness000": {
+      "sha256": "471ff0d05215e9ca233af19d6f1986049752ef81a4c7e83cb219fa825a1ec702",
+      "axioms": {}
+    },
+    "MetricWitness001": {
+      "sha256": "8b5234e8d05bf518fa59382e775e3599df1c80b3c97b6c5c10adfcdba42ecc4c",
+      "axioms": {}
+    },
+    "MetricWitness002": {
+      "sha256": "cda12d49e155b384849c74e8eb4c02088af4d2ca37abcfdee54dc7e14a97d1b8",
+      "axioms": {}
+    },
+    "MetricWitness003": {
+      "sha256": "84240e4c8783011e178eb060d09e986483aed9a5f2756c7321b5b06ed3163b46",
+      "axioms": {}
+    },
+    "MetricWitness004": {
+      "sha256": "4c7c0e0674734000bb87c33a8dd913f15ff1624451cb57cd7e47165ec4b5a757",
+      "axioms": {}
+    },
+    "MetricWitness005": {
+      "sha256": "6bdcfd73fc73f93a754c9d7fd5947d170e31a8a6561e534dfd820618014068c9",
+      "axioms": {}
+    },
+    "MetricWitness006": {
+      "sha256": "69d6ca04fd1e6807e5be4c79ffd4c70afb9688aaa8206aed621f0fd3ffb4d026",
+      "axioms": {}
+    },
+    "MetricWitness007": {
+      "sha256": "6eacae53192df6ee4b079b3612ae220f6d9f53904d3ff594c3597e59f2b7d24e",
+      "axioms": {}
+    },
+    "MetricWitness008": {
+      "sha256": "288eb423dd2886cecb6e51d834b3ede68d835ee9cb13e2ae78f60a66954627e3",
+      "axioms": {}
+    },
+    "MetricWitness009": {
+      "sha256": "0d462fd0f0b2bb8ddb4eb85db7b80ea4487f467765c595373f5fb59a0064122e",
+      "axioms": {}
+    },
+    "MetricWitness010": {
+      "sha256": "dbd1db6c01a45a4fae7a139c6a0fa2c155e9c5048595e8e2b1cbeff40410276e",
+      "axioms": {}
+    },
+    "MetricWitness011": {
+      "sha256": "8e02dd2bf662aaed4281607470d6d8c88da896ea0701eba1875d23980562f625",
+      "axioms": {}
+    },
+    "MetricWitness012": {
+      "sha256": "5948a8fabb4ace1fa9037e0bbfb9aba66ba4dbca2a371eacecdf2b66b0bd931e",
+      "axioms": {}
+    },
+    "MetricWitness013": {
+      "sha256": "617c9def6328507270b45d903a9d57567679dd63c363db0f6a44637e4e5e7e62",
+      "axioms": {}
+    },
+    "MetricWitness014": {
+      "sha256": "ea038d2c9ba8f00b7dfc4930373485d7d65f37e1b232e577747c6de2a8a6f364",
+      "axioms": {}
+    },
+    "MetricWitness015": {
+      "sha256": "85abf119e77fe02581816729a9d8da27f0018d2c0ffdf7ada19c0a9886a05cdd",
+      "axioms": {}
+    },
+    "MetricWitness016": {
+      "sha256": "d0974ec2eb054b85fb769eafbbd021c0f0bd1f1b7a2c0f0493652c9a2b8c5f7b",
+      "axioms": {}
+    },
+    "MetricWitness017": {
+      "sha256": "c6c079f447c07db3a1692a70a6b5e1fe8df7b4b2ca990384f5b2a3048ad8a1a6",
+      "axioms": {}
+    },
+    "MetricWitness018": {
+      "sha256": "b56bc925ab8b8422677f5626d59d86606648d80328c4e0a361f205ef50c4b3e9",
+      "axioms": {}
+    },
+    "MetricWitness019": {
+      "sha256": "3da0afb52db8f59d5b713d426e621632bf8ef2fd3f57bd52645edf25bd2afe82",
+      "axioms": {}
+    },
+    "MetricWitness020": {
+      "sha256": "6543f2bc9fc2b481eec9456f6978009a6da086e74f5a250c44237354000762c8",
+      "axioms": {}
+    },
+    "MetricWitness021": {
+      "sha256": "63793972d1a9d8ca52d3da0ec7c8b251289c70aa941bcf1481bc5050fb8cf442",
+      "axioms": {}
+    },
+    "MetricWitness022": {
+      "sha256": "35ddf3b826da10ed64843a226a7032b797254356c47a903dd3b08b9cb1cf7dc6",
+      "axioms": {}
+    },
+    "MetricWitness023": {
+      "sha256": "b451245de1dba648a24054517bf882925c201d2d5f551aa21db6a466cd618401",
+      "axioms": {}
+    },
+    "MetricWitness024": {
+      "sha256": "ef4b26a1cd67fb1fe068dba741d01a9b26db00646e990bdf657ebbe3d7affd7f",
+      "axioms": {}
+    },
+    "MetricWitness025": {
+      "sha256": "0fa039aef2aacbfa382afe9877bc7c394afd2f624014bf9707aa8083147f8a69",
+      "axioms": {}
+    },
+    "MetricWitness026": {
+      "sha256": "2684bc7a91512eb97b011d81ec7d8364ab011b553587104d7605172e22637a50",
+      "axioms": {}
+    },
+    "MetricWitness027": {
+      "sha256": "9147fa26fec22bf465bfc61522e81517a3a620a52b14efa7a8b23ff98825925d",
+      "axioms": {}
+    },
+    "MetricWitness028": {
+      "sha256": "a4b5270416f02f436edb6877237e4b8f7321ddce9282753df80e6b51eb0572a9",
+      "axioms": {}
+    },
+    "MetricWitness029": {
+      "sha256": "e41ad71bef40f776d2b2cb6ab1df649b20a3f6c6ec6282cf025a8c547c59a933",
+      "axioms": {}
+    },
+    "MetricWitness030": {
+      "sha256": "0cd34b60f50deddfa55ee9787bd0cab9a7edb571abd667b44896384bdf4e9c14",
+      "axioms": {}
+    },
+    "MetricWitness031": {
+      "sha256": "fbcbef4df9f9d7dd31582a6f52329bc57a61f5b5f20b1074175d8b71e6624fe0",
+      "axioms": {}
+    },
+    "MetricWitness032": {
+      "sha256": "4ca14bce830d57a92d80e808b6428b47a7d6fefb0728caa6c9a120f7e516bc8f",
+      "axioms": {}
+    },
+    "MetricWitness033": {
+      "sha256": "b37c558f4c90b53bb21a233842b4826b4f7df5e71883f0c4f033afe82834ecac",
+      "axioms": {}
+    },
+    "MetricWitness034": {
+      "sha256": "ac7ca1aa7edd2a6dfa3fb14ee3149a1bcf1e48d12a267342f49e8510b174162f",
+      "axioms": {}
+    },
+    "MetricWitness035": {
+      "sha256": "d99d796234acd301c4bc0b79cb79dbeb5ac261d2204ab50973c6ad6f7bf08e70",
+      "axioms": {}
+    },
+    "MetricWitness036": {
+      "sha256": "600b08d41df56b8a542524e817f7d568434611480c7ab8fdb762f74c4d3cc6e4",
+      "axioms": {}
+    },
+    "MetricWitness037": {
+      "sha256": "9f2332282e62333073d377a9f5e661544277501a077e557480b84eedf8e9c826",
+      "axioms": {}
+    },
+    "MetricWitness038": {
+      "sha256": "172c3d94916633d2bb111c4d26caaa1b5f62fb64f355e14efa94af7db0d3ae0e",
+      "axioms": {}
+    },
+    "MetricWitness039": {
+      "sha256": "74205df0f174f4ad3290abcb80ec0c97811ba4195da646ef66e03df6f6d35358",
+      "axioms": {}
+    },
+    "MetricWitness040": {
+      "sha256": "712fe924341912c0535c570d870e10afa088b86f519a5fa16fc899280fdc62dc",
+      "axioms": {}
+    },
+    "MetricWitness041": {
+      "sha256": "1661f3769f835a0882554ecc293ed41ac4fd5cd47a90e937dfd362b42b37e381",
+      "axioms": {}
+    },
+    "MetricWitness042": {
+      "sha256": "caa5e7989fda70ea6e166b8f67644168518deef11ebd91c02fee817d0d7bfe27",
+      "axioms": {}
+    },
+    "MetricWitness043": {
+      "sha256": "65ca1be58891e923377201aadc446bc6134b2541ce4e53eaf1cdb00f72b98f1d",
+      "axioms": {}
+    },
+    "MetricWitness044": {
+      "sha256": "25e0b6ed13befdd7823d378d1583fc0d538d7cc7962fc771b0cfd7602c381c49",
+      "axioms": {}
+    },
+    "MetricWitness045": {
+      "sha256": "1eb84f0a087bc71dfb9efab2ca84c8ce141a06a7bd3d3a67dca84402c9d856f7",
+      "axioms": {}
+    },
+    "MetricWitness046": {
+      "sha256": "5dcffe49a0c81d84c74992c1940f5c63d15ba41bb2d8116bcc5a4ed48e136db6",
+      "axioms": {}
+    },
+    "MetricWitness047": {
+      "sha256": "9c32aeff39bd99dc30d62c760948c9ca49940d3ae155661a343b1efa4131937a",
+      "axioms": {}
+    },
+    "MetricWitness048": {
+      "sha256": "1a41f018f8c1a83898eacd2c79dc30e99ae095c3b44cc945c8b92440032e1f64",
+      "axioms": {}
+    },
+    "MetricWitness049": {
+      "sha256": "ce42233f449f99812e631ea1500b12091e39e16f1bfe7aa56cc42042b2d43efb",
+      "axioms": {}
+    },
+    "MetricWitness050": {
+      "sha256": "4bb8cbb399ba8d60b5f7c2dbd0458f9c41d7331011646e398123c377fbb31350",
+      "axioms": {}
+    },
+    "MetricWitness051": {
+      "sha256": "a2cc3103a91e8e334bca9237f855c68912d218a3e953e05088a02df145bda709",
+      "axioms": {}
+    },
+    "MetricWitness052": {
+      "sha256": "a8a7af6c717167f894bd3e6c7a4e2ba92fdde91eb10f9a08aa50578df772d50d",
+      "axioms": {}
+    },
+    "MetricWitness053": {
+      "sha256": "8b833b5bf87634651a52e28007146c72dd5e01377a554a00a683b26f76985099",
+      "axioms": {}
+    },
+    "MetricWitness054": {
+      "sha256": "18c066bdaf2c1dba8be1446ca2947103909e70641ea367a459e9b89a892069f1",
+      "axioms": {}
+    },
+    "MetricWitness055": {
+      "sha256": "d0716773f906bd89707dc174053b87b3a6d29d166af7cde2717fd65909813ce8",
+      "axioms": {}
+    },
+    "MetricWitness056": {
+      "sha256": "185d67954ef192e2cfc36646383c90ce47ff149ded804b8b7687a8587e246576",
+      "axioms": {}
+    },
+    "MetricWitness057": {
+      "sha256": "f947fb28669e5e1541f364294a12726380ae7d55cfd1efcc11e4f7225bff6a58",
+      "axioms": {}
+    },
+    "MetricWitness058": {
+      "sha256": "6a1bc6997c39963d2223396a4e3ebeb44bb34bb9dbf2f0d66ec1844bc30f6629",
+      "axioms": {}
+    },
+    "MetricWitness059": {
+      "sha256": "6d9f0ccb182f7189c0f24f134078c9879401c1d2991f3b7852c89a4b08cfddad",
+      "axioms": {}
+    },
+    "MetricWitness060": {
+      "sha256": "da816bb14c1b9a38a7e54bd18baa2c1e4300bb16c14cfc0ffc6ebc9d1db1efbf",
+      "axioms": {}
+    },
+    "MetricWitness061": {
+      "sha256": "91d9acbebf3cd10b40ca6610579c8816e49468477c5486b2136f2fa88cbab686",
+      "axioms": {}
+    },
+    "MetricWitness062": {
+      "sha256": "65fad4d76c972b657cab58ef2008172b9a075a4f95ae87d294514bc87c4719c8",
+      "axioms": {}
+    },
+    "MetricWitness063": {
+      "sha256": "00f5426af1d12e157b8a9b4a03a0b688f930888688ef842e4c7e29d567077c0e",
+      "axioms": {}
+    },
+    "MetricWitness064": {
+      "sha256": "788dfa06aaee1bd4de6a442642ddd96867faacd16d233baa7819628a2d693879",
+      "axioms": {}
+    },
+    "MetricWitness065": {
+      "sha256": "17b0219e5ce978b80f260a825edc6f88d94eaf9c514b99801ff92c20036eb917",
+      "axioms": {}
+    },
+    "MetricWitness066": {
+      "sha256": "6cd3b424196d831799b082932c6700e9a98004486fca41449a81a0173b1959a4",
+      "axioms": {}
+    },
+    "MetricWitness067": {
+      "sha256": "112d06daad7b169d75c36c35f7554f4a8bc18cb9243874559119245d3bb3683a",
+      "axioms": {}
+    },
+    "MetricWitness068": {
+      "sha256": "53a80b63f74df2ba28bd672f8e659bec786f9bf64586213bfc2452572f04a401",
+      "axioms": {}
+    },
+    "MetricWitness069": {
+      "sha256": "03ed726373d9c2e38945774012a02664bc6c6e7f10f2426e97fa5172b2df8f09",
+      "axioms": {}
+    },
+    "MetricWitness070": {
+      "sha256": "75d8ccf152b2e6fdf184930ebf24c28f889c2271d85eb3b2774bf0e56c5f27fc",
+      "axioms": {}
+    },
+    "MetricWitness071": {
+      "sha256": "704291ec47429aff8b604c82390265352d16145c8264f00ff724bec99bc0084b",
+      "axioms": {}
+    },
+    "MetricWitness072": {
+      "sha256": "3fc186eae37b95007ca5df1099ff1196d48e12634be4a01b586310fcc5ae49c6",
+      "axioms": {}
+    },
+    "MetricWitnessReadout0": {
+      "sha256": "91b8491a15fd851c2611e653f32814942f0a1c5ccf24354039f9daeed44dd65a",
+      "axioms": {
+        "SchwarzschildMixtures.MetricWitness.tt_syntax": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricWitnessReadout1": {
+      "sha256": "f9cdc2fb954954d95ba3cabc98273f21fa32b29ec78ed55428b5298033e6928f",
+      "axioms": {
+        "SchwarzschildMixtures.MetricWitness.rr_syntax": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricWitnessReadout2": {
+      "sha256": "f39850a1f071c1f9340790bd107937511e4b86af0190950542fb1e7635e0e8be",
+      "axioms": {
+        "SchwarzschildMixtures.MetricWitness.radialVector_syntax": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricWitnessReadout3": {
+      "sha256": "c43241824784daea465b3a949f059e832be869ef8b63f0b54ce53303c32be0e7",
+      "axioms": {
+        "SchwarzschildMixtures.MetricWitness.sphereTrace_syntax": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricWitnessReadout4": {
+      "sha256": "a89737ecc7900dcf7d17695f07977a9048ba46a6b00c4e7ed59f1d6aa0340965",
+      "axioms": {
+        "SchwarzschildMixtures.MetricWitness.traceFree_syntax": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricWitnessEvenReadout": {
+      "sha256": "04e8565ae7dbfe3b50f4ed90e0ce054ff5ee6f607658f6999f2aa5d22a4b26fe",
+      "axioms": {
+        "SchwarzschildMixtures.MetricWitness.readout_syntax": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricWitnessFirstA": {
+      "sha256": "6f609e03ac52b2c076b4c1c2af5d28a736e545522dbd976b12704c179f53f302",
+      "axioms": {
+        "SchwarzschildMixtures.MetricWitness.firstA_reduced": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricBareFirstLinkA": {
+      "sha256": "c4b5f44747f1b9f01c2b0535818b2d0c3f33123dbbd84182a80817eb4deea4ae",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareFirst.sourceA_cancellation": []
+      }
+    },
+    "MetricWitnessFirstB": {
+      "sha256": "d891b67d74686673fefda8c022f26e49292551f5b28757a2605576c786a8b09a",
+      "axioms": {
+        "SchwarzschildMixtures.MetricWitness.firstB_reduced": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricBareFirstLinkB": {
+      "sha256": "18bc16dfacb7ead8a967b9afb08e25cd78198977257111d2b7c157e1c434cf6c",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareFirst.sourceB_cancellation": []
+      }
+    },
+    "MetricWitnessFirstC": {
+      "sha256": "d8664056945104c7c31c087f430a37ba2353917c62cdc8b9f60e5030cb56f5d1",
+      "axioms": {
+        "SchwarzschildMixtures.MetricWitness.firstC_reduced": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricBareFirstLinkC": {
+      "sha256": "b044995ddb070788cce3672e81da83694573b742837a082fdb653d6e16bb2d62",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareFirst.sourceC_cancellation": []
+      }
+    },
+    "MetricWitnessDifferenceA": {
+      "sha256": "f377f465a2dd5ecdbf54d555abfe475662c6a60ba36f4795fb7e9aacf78be65e",
+      "axioms": {
+        "SchwarzschildMixtures.MetricWitness.differenceA_reduced": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricBareDifferenceLinkA": {
+      "sha256": "8f04bb4c60133032089dc788bcfc452d30282d700faad5a5ca192038296d5d48",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareDifference.sourceA_cancellation": []
+      }
+    },
+    "MetricWitnessDifferenceB": {
+      "sha256": "b9022a1ed05a4494cb2bbcb77d23204f95621931a33e4f4170682786743494b0",
+      "axioms": {
+        "SchwarzschildMixtures.MetricWitness.differenceB_reduced": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricBareDifferenceLinkB": {
+      "sha256": "c9eb6eb3370cd636af8d8a7d61ea5ce31c2e9c72a5434f02842e099df2692caa",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareDifference.sourceB_cancellation": []
+      }
+    },
+    "MetricWitnessDifferenceC": {
+      "sha256": "593e5a33463ef009949fa2c39d820b097341ab9cc5b229b4ffe7a4c43fb3b592",
+      "axioms": {
+        "SchwarzschildMixtures.MetricWitness.differenceC_reduced": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricBareDifferenceLinkC": {
+      "sha256": "0a9d38f41df1d455a471f64e88703962928db577a6cd06407041a7fa188fe45f",
+      "axioms": {
+        "SchwarzschildMixtures.MetricBareDifference.sourceC_cancellation": []
+      }
+    },
+    "MetricBareSolutions": {
+      "sha256": "a1088a1bca8b04475e2041023f072eeb1bfd16b11cb8cebf9c6ce659112859d5",
+      "axioms": {
+        "SchwarzschildMixtures.metric_first_solves": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.metric_difference_solves": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MatrixCertificateData": {
+      "sha256": "ea817e3dafbce0fc2292df2768f82ce932f9c807824cafbe20d2adbcca359c28",
+      "axioms": {}
+    },
+    "AngularObstructionPilot": {
+      "sha256": "db1934fd646baa57bbd7a62384c5e7ea86032644723a4933b61d0113287875a1",
+      "axioms": {
+        "SchwarzschildAngularObstruction.nonzero_at_physical_labels": [
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MatrixCertificate": {
+      "sha256": "3f926a1e2781c16811754713c93fcb85fcff097e54ad8f7a3dfe8f2e26f4fbda",
+      "axioms": {
+        "SchwarzschildMatrix.annihilates_column": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMatrix.source_projection_identity": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMatrix.projected_source_nonzero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMatrix.no_solution": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ArchivedRationalSource": {
+      "sha256": "f3da7c530745bab4e7e29ddb75b03300c3acb5b99c1ecffa3b8fe488eb16ff5e",
+      "axioms": {
+        "SchwarzschildLaurent.archivedComponent_coeff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.archivedSource_orders": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LaurentMatrixOperator": {
+      "sha256": "e2fdced5e8717999846384e2c1725ee16c7afdc8477760fc309283e04a6b5e5e",
+      "axioms": {
+        "SchwarzschildLaurent.matrix_derivative_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.matrix_operator_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LaurentMatrixEntries": {
+      "sha256": "2b190addf8ec4291e5d9328299a737358d3b0d9765c1620b24aba0c5aba4c00e",
+      "axioms": {
+        "SchwarzschildLaurent.coefficient_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.matrixEntry_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.sourceEntry_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RationalRowExclusion": {
+      "sha256": "b7bec84856cc3570fe30b201d21215d897bf4b1530dff12d3093dbca3e520d9e",
+      "axioms": {
+        "SchwarzschildLaurent.matrix_equations_from_rational_solution": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.matrix_equations_from_homogeneous_span": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.archived_rational_row_no_solution": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MixtureSourceAlgebra": {
+      "sha256": "b936a85140851d3a557d702f51fe144e4903fd23c75d4c5c15b15ff967e5efd5",
+      "axioms": {
+        "SchwarzschildMixtures.exact_roots_of_obstruction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "PureOddWitness0": {
+      "sha256": "8e4236bfda6982a43650294e1efc72883d116e23b3c6b00cebf80cbfc82c41db",
+      "axioms": {}
+    },
+    "PureOddWitness1": {
+      "sha256": "7900e00edd551d0a14c43feb2428f8a9b76020c88819649cd0c2b5f707fcae74",
+      "axioms": {}
+    },
+    "PureOddWitness2": {
+      "sha256": "47cd8920df028bea1e7414a7d969567c5735a6b3d80882aa3aa3ad6aeab016f3",
+      "axioms": {}
+    },
+    "PureOddWitness3": {
+      "sha256": "bb4052a09152a9152e065f63cab88121cac5315c9bab7ce1ffdd2f6710bfe66b",
+      "axioms": {}
+    },
+    "PureOddWitness4": {
+      "sha256": "c0bde65a6c8609e7757f59e30f1132e0feb1781468d6683cc0743360fd4e9eed",
+      "axioms": {}
+    },
+    "PureOddWitness5": {
+      "sha256": "8b29e3049063378fd9a7c7736a1c3278f571451cb5eca0c43e828f5067aa9936",
+      "axioms": {}
+    },
+    "PureOddWitness6": {
+      "sha256": "b181690e2ae44c8494a01810f4cadb2d3dc1fd7379fca743304489a6ba14f7fe",
+      "axioms": {}
+    },
+    "PureOddWitness7": {
+      "sha256": "dd8f177765f9af2bf14690f548b65ce69d0343328586d381db32b565ecefa9f5",
+      "axioms": {}
+    },
+    "PureOddWitness8": {
+      "sha256": "b9487ca3a0820dc9ea2bd9723f4aa04cbb0417cec88b2f62b729fc3a74d6e1bf",
+      "axioms": {}
+    },
+    "PureOddWitness9": {
+      "sha256": "5cb4c7574c0ad7c3986abccd8e63c4b29629ec1b3a0c8af6f188de6a813b575c",
+      "axioms": {}
+    },
+    "PureOddWitness10": {
+      "sha256": "33c6290acb082e6b4b12b491ac8cdc872f6c8613e9382868ac8e70463bbe3c32",
+      "axioms": {}
+    },
+    "PureOddWitness11": {
+      "sha256": "b2bea45bfd5e554b0febd138f1ce7d95eb2f4302a72fd1ce66480098566afc74",
+      "axioms": {}
+    },
+    "PureOddWitness12": {
+      "sha256": "adf97fdf9089bb932df2d50c57d27194c6d370546d18876db6b8ec1af59040ef",
+      "axioms": {}
+    },
+    "PureOddWitness13": {
+      "sha256": "f3f732cf8700a79347ab7b62db771463974068ecac298192f98292864cb84f4f",
+      "axioms": {}
+    },
+    "PureOddWitness14": {
+      "sha256": "c73a6a17b51daa694d7d32644b1d361250a68e48076e1cad71de27f0c4411084",
+      "axioms": {}
+    },
+    "PureOddWitness15": {
+      "sha256": "cd6b631d3c047129c7f99ec0e31b891103db6bc8cb5693c13343f4eb7d7723d9",
+      "axioms": {}
+    },
+    "PureOddWitness": {
+      "sha256": "41da92c46824cdcc45f981e706069562ffb9b013e4fc6f6be099452550683936",
+      "axioms": {
+        "SchwarzschildMixtures.PureOddWitness.a_reduced": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.PureOddWitness.b_reduced": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.PureOddWitness.c_reduced": [
+          "propext"
+        ]
+      }
+    },
+    "ArchivedOddData": {
+      "sha256": "8c0ff80c130a840a3fe3dcc3d29769d49fd82c9b671592fc766ca9f481998fdf",
+      "axioms": {}
+    },
+    "OddBareCase": {
+      "sha256": "872f1041499353227829f4351b1a4cb556f8949e95d5e04c0567eb814aae307b",
+      "axioms": {}
+    },
+    "OddBareCaseCheckedA": {
+      "sha256": "8be749c96043995809c06840736ee2a6da6df39a3e4d1732cec1e0e6b0905b59",
+      "axioms": {
+        "SchwarzschildMixtures.OddBareCase.odd_a_checked": [
+          "propext"
+        ]
+      }
+    },
+    "OddBareCaseCheckedB": {
+      "sha256": "e11e5c501259fd20efa4b95d8af3bbef611b164d3a569cc0259a94396c703740",
+      "axioms": {
+        "SchwarzschildMixtures.OddBareCase.odd_b_checked": [
+          "propext"
+        ]
+      }
+    },
+    "OddBareCaseCheckedC": {
+      "sha256": "a3324a51d4fb1e7562ec8b883b87e3158fc9115dd3a4c025794d1e01b00cc206",
+      "axioms": {
+        "SchwarzschildMixtures.OddBareCase.odd_c_checked": [
+          "propext"
+        ]
+      }
+    },
+    "OddBareCaseChecks": {
+      "sha256": "5220dd4aaf0adf684d4fabff81a83b1f0d2c601c374857fc39ee95376414d78b",
+      "axioms": {}
+    },
+    "PureOddDenominatorData": {
+      "sha256": "182d409150e3f2989d343964b50dcbd9714a1e12c2d798c0ab4c2ebd925ba050",
+      "axioms": {}
+    },
+    "OddBareChecks": {
+      "sha256": "13e2528f57e31cb3bfcb4e9aaf384102918e298f8529767f187f6fa9e274ca04",
+      "axioms": {}
+    },
+    "ArchivedOddFraction": {
+      "sha256": "47b0c1df9a5f2c337f5d442e31d46b48fa06073181796161b697e0211871a78e",
+      "axioms": {
+        "SchwarzschildMixtures.ArchivedOddData.archived_source_as_fraction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RegularizedOddSource": {
+      "sha256": "990b3af7af1ef0ce9d625d4bf1675fbdefc1b7d8c94c3c1fd4dd944e23973556",
+      "axioms": {
+        "SchwarzschildMixtures.odd_forcing_restored": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "PureOddKernelLink": {
+      "sha256": "e16d6cc14d25668aac5850a80b2cb8159ab7a098fdef9293d16182094561f793",
+      "axioms": {
+        "SchwarzschildMixtures.PureOddProgram.calculated_odd_source_is_archived": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.PureOddProgram.calculated_pure_odd_has_no_particular": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricMixtureClassification": {
+      "sha256": "805a79a4fe3376e4981f8ed7eb6f54100b16f31bd96bb5e1bc61d249bafb0d17",
+      "axioms": {
+        "SchwarzschildMixtures.metric_mixture_classification": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RiccatiAlgebra": {
+      "sha256": "e7203a1e92e8df68af0e7f685d9f14a7417c6598edfec346144b8c4117065d84",
+      "axioms": {
+        "SchwarzschildLaurent.RadialDifferentialField.parent_log_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.RadialDifferentialField.riccati_alternatives": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RiccatiFinite": {
+      "sha256": "458a68dd6da0cfd4a8e535f7db4d001bef0d58bdb1a9aa689386de64ad9f99cd",
+      "axioms": {
+        "SchwarzschildLaurent.logDerivativeEquation_of_riccati": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.ordinary_log_residue": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.origin_log_residue": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.horizon_log_residue": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RiccatiInfinity": {
+      "sha256": "40bfa043d45b29d92a9d742ed88b2e844d18fc1505e5c83bd1784d35a105ea27",
+      "axioms": {
+        "SchwarzschildLaurent.reciprocal_log_eq": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.infinity_log_coefficients": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RiccatiPartialFractions": {
+      "sha256": "210dbd5cf925726c77a077ebbc5a12115b0ff52ffab0d76351d27266de061a41",
+      "axioms": {
+        "SchwarzschildLaurent.constant_of_everywhere_regular": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.log_partial_fractions": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.log_candidate": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RiccatiRational": {
+      "sha256": "2c93a918c2d54a75e391aa6e3522c47cbb432531b8a6bbb61b4ce636abe1de0f",
+      "axioms": {
+        "SchwarzschildLaurent.algebraically_special_rational_control": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.rational_riccati_no_solution": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RiccatiDiscriminant": {
+      "sha256": "50f0637d060e080c3377fcb4e0ef683551e537b107b048435915f57e5c98058e",
+      "axioms": {
+        "SchwarzschildLaurent.discriminant_ordinary_order": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.discriminant_horizon_order": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.discriminant_equal_degrees": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RiccatiSquare": {
+      "sha256": "14621a6d90f82516ef490b2d623dcc49d832039fe2ea5c14048580931ee31f00",
+      "axioms": {
+        "SchwarzschildLaurent.discriminant_is_square": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.quadratic_riccati_no_solution": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "FixedParentIndependence": {
+      "sha256": "ff6a91b44ded7ab0ca80f18952997d43b26bc32b0b79b1c3d08932167e60982b",
+      "axioms": {
+        "SchwarzschildLaurent.RadialDifferentialField.fixed_parent_independence": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.RadialDifferentialField.evaluateRow_injective": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.RadialDifferentialField.evaluateRow_operator": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MeromorphicRadialField": {
+      "sha256": "51bb49eee7a31ae40c25672fed17e33e87a414969363b1d6f974c71eb56a7185",
+      "axioms": {
+        "SchwarzschildLaurent.MeromorphicRadial.polynomialGerm_injective": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.MeromorphicRadial.pointDerivative_rationalGerm": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.MeromorphicRadial.differentialField": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "MetricMeromorphicClassification": {
+      "sha256": "8b61d5a542feb2c3feed14a0a89b7f7d92f9d704b19ea9b9dabb0bc7e5eb8468",
+      "axioms": {
+        "SchwarzschildMixtures.metric_meromorphic_classification": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RegularizationBridgeData": {
+      "sha256": "35980336f504da12cf2bf6b34446bf66b88cee37de66c57aca7dfa27d526ff55",
+      "axioms": {}
+    },
+    "RegularizationFieldAlgebra": {
+      "sha256": "fccdfda1ef8a4a697c177b8eccf1ee6bc46d8a935d603c043352ecbd1fb0ab43",
+      "axioms": {
+        "SchwarzschildMixtures.Regularization.compare_base_fields": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Regularization.local_field_add": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Regularization.compare_second_fields": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RegularizationRegulatorEvenEven": {
+      "sha256": "7cb3e83f492488963e7fc51d8adad4246c1c71b65253bf03dcc9a4c4ac089f72",
+      "axioms": {}
+    },
+    "RegularizationRegulatorEvenOdd": {
+      "sha256": "9c1cd8002b169426ee84ccfbc9a8380b4eb0245c3a975619e7dd1d1be68ebd05",
+      "axioms": {}
+    },
+    "RegularizationRegulatorOddOdd": {
+      "sha256": "ae49de49179d42db0ad862491a023c3f5558fb60f27fb02deef41483e1f7ea59",
+      "axioms": {}
+    },
+    "RegularizationRegulators": {
+      "sha256": "1ad357fef94feda064879ecd86e8e32404c5eb73207d16f820a4ca3d47db0b9a",
+      "axioms": {}
+    },
+    "AdmittedMixtureCase1": {
+      "sha256": "f63adb45fc7f9fad2a278eee6a21cdc0aa54bb0f7ce27b670cd9d215fad085c8",
+      "axioms": {}
+    },
+    "RegularizationCompareFirst": {
+      "sha256": "08ccbeec8860b46b81c5ebc642d7b9b85c60c41744b2cb4c863961f0faca1e3f",
+      "axioms": {}
+    },
+    "RegularizationCompareFirstCheckedA": {
+      "sha256": "76bf9577e45f706123f0ba0363fa7566f6f70fe7d522a7aa97fa560e4f62e639",
+      "axioms": {
+        "SchwarzschildMixtures.Regularization.checkedFirstA": []
+      }
+    },
+    "RegularizationCompareFirstCheckedB": {
+      "sha256": "32e06f17a13d92b45d05094327319bab4f364e5f8b69d0e4569b613fa6e72783",
+      "axioms": {
+        "SchwarzschildMixtures.Regularization.checkedFirstB": []
+      }
+    },
+    "RegularizationCompareFirstCheckedC": {
+      "sha256": "0428e64191caf3b4daad81d18f37ccf181573b061f709dc98ed6eb1e39c534fa",
+      "axioms": {
+        "SchwarzschildMixtures.Regularization.checkedFirstC": []
+      }
+    },
+    "RegularizationCompareFirstChecks": {
+      "sha256": "159944c283d4031d05a96f19f4c8f8fb62cc5d0651e4aa910537df967aa6fafe",
+      "axioms": {}
+    },
+    "AdmittedMixtureCase2": {
+      "sha256": "669e13797ac1803ad3148bb735ee2980efa3e6afa1f1cdf6f11b62182e398f66",
+      "axioms": {}
+    },
+    "RegularizationCompareSecond": {
+      "sha256": "df6234518576c6a0704a56350ed3d060c917e64528d916fa9193da2dc9dcdd7b",
+      "axioms": {}
+    },
+    "RegularizationCompareSecondCheckedA": {
+      "sha256": "45c3bc92e75efa67fec09a7f7874aab9ac31b8829e2b6eba2a429b657b3487b5",
+      "axioms": {
+        "SchwarzschildMixtures.Regularization.checkedSecondA": []
+      }
+    },
+    "RegularizationCompareSecondCheckedB": {
+      "sha256": "428068078bc84a3a0cb00381db54f82c93ade66dfafd160de9f3be9a0089733d",
+      "axioms": {
+        "SchwarzschildMixtures.Regularization.checkedSecondB": []
+      }
+    },
+    "RegularizationCompareSecondCheckedC": {
+      "sha256": "9129f85ee9146be759383fd187182a5569f3ac3e0368541ce60be7b0254b7e7a",
+      "axioms": {
+        "SchwarzschildMixtures.Regularization.checkedSecondC": []
+      }
+    },
+    "RegularizationCompareSecondChecks": {
+      "sha256": "f165f1a2a5132475f63a389d978c79c5b5bd714ee7241fcbca54e4d9c54ac945",
+      "axioms": {}
+    },
+    "OddCase": {
+      "sha256": "ba08a5a7c4abc13aeb0100e4ba5a5f97e3cac6d0fe4b0034cb68522503b409d1",
+      "axioms": {}
+    },
+    "RegularizationCompareOdd": {
+      "sha256": "90d0b3900fbc377f534fb31ec05bd028e9520df80d2587c859ee2336fc892447",
+      "axioms": {}
+    },
+    "RegularizationCompareOddCheckedA": {
+      "sha256": "e450945ec9e309a44c1710da009199d2854499673beb72324d4386aead0ca169",
+      "axioms": {
+        "SchwarzschildMixtures.Regularization.checkedOddA": []
+      }
+    },
+    "RegularizationCompareOddCheckedB": {
+      "sha256": "f4d3edfb892b2e9bea1b492cc5756ff3d9a10e6ccb9faf3a60aa6d09d28df960",
+      "axioms": {
+        "SchwarzschildMixtures.Regularization.checkedOddB": []
+      }
+    },
+    "RegularizationCompareOddCheckedC": {
+      "sha256": "43aed15586b9392202ce2e7fcb09a6596cbf3cb89cfcff45ba1314713db2fa3a",
+      "axioms": {
+        "SchwarzschildMixtures.Regularization.checkedOddC": []
+      }
+    },
+    "RegularizationCompareOddChecks": {
+      "sha256": "43a9c00507376c30b263c9a650b00bbbfda017a188e1500cdddebde7b4676717",
+      "axioms": {}
+    },
+    "AdmittedMixtureCase1CheckedStepABounds": {
+      "sha256": "3a42e4c60267ed229a408511881875f29ab1532fe6b119bb97b1ff6683c96882",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.step_a_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedStepAEncoding": {
+      "sha256": "20889a0fa5b19050157e68f2e2598bbba844e5eef933c626cebe0ce3cac1de62",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.step_a_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedStepA": {
+      "sha256": "858de53948da105c1dcbae51ae7be9e8e1909ca2c965b64f6241a26e29ba5cff",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.step_a_checked": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedStepBBounds": {
+      "sha256": "165a321f44438292bc5d80afee375f4e948cc5ecb54f4a8cad40698ca9342aea",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.step_b_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedStepBEncoding": {
+      "sha256": "3f834e178de59e6fa3f467af3410d12aa456140fd8913a87a266e1a6890f8145",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.step_b_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedStepB": {
+      "sha256": "e9a83be3ea0a473e3244ae16e1e79376c863d5165f980753399d2b8121cc631f",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.step_b_checked": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedStepCBounds": {
+      "sha256": "580ba5acbfe8d6b6d540efb33db24bcf244089615e78e58dec4acf82a5512f5b",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.step_c_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedStepCEncoding": {
+      "sha256": "a237813636840432824a804a634d3762042f1ccdc7d07c15a3fec02f809dba06",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.step_c_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedStepC": {
+      "sha256": "16ee8c352b595e8fd07e2d725aaf19a770ac6cf689960a1e7e093e0f567a7a0d",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.step_c_checked": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedSecondABounds": {
+      "sha256": "20695f3e8fdf1a4b908533c68f2792e8dfc96b5979d93b4edee5342161171737",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.second_a_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedSecondAEncoding": {
+      "sha256": "dcdda575cff40442a156deba1e5355d9279f941eec6a32e534f02f2b3822d8e2",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.second_a_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedSecondA": {
+      "sha256": "12e9ace0c5a91c0f57ca85ffdea820098fd11be33e22d6aa9cef52b2356a7f4f",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.second_a_checked": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedSecondBBounds": {
+      "sha256": "399d89c9018641bdd5be4fb299e82d1409af862ed9c6560539bbfd46d7a91799",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.second_b_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedSecondBEncoding": {
+      "sha256": "35f4cc8d454c74bd16e278be31092bc7ac28798731c0a492d2c1f494d055b19f",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.second_b_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedSecondB": {
+      "sha256": "2db8032f0fcc666a80ac73fd8e4b4922c220521a3b4ef562d12157165b146a97",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.second_b_checked": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedSecondCBounds": {
+      "sha256": "b832a19f203373942f42deaa9244d0a11249cc130ba73c2cb542d73ca63f15fe",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.second_c_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedSecondCEncoding": {
+      "sha256": "37e2de3dfb0f50086a201b52f7f717ea906f25aad00637b3dbf3e7b0183e851f",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.second_c_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedSecondC": {
+      "sha256": "2a5776cb9f12e963e28d516bde716966ce74dc569e59b8a15051d674bc05f177",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.second_c_checked": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedABounds": {
+      "sha256": "571d3e066aecf6f2cbe0c73fcd272e2070745918cd481a2b9355e9201385e221",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.source_a_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedAEncoding": {
+      "sha256": "3a1688603586d52342b241c2255fa92f0cd9cea0a5a3fcece39531253d507169",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.source_a_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedA": {
+      "sha256": "8960b717e8a94e0a862d2f09a44d95d0813adf8730821a6819afc550859d2da8",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.source_a_checked": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedBBounds": {
+      "sha256": "fc375e08b4ba51a67ec4079510f2ace75e2bdbe2a39d46ceddca32aa163fd6fb",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.source_b_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedBEncoding": {
+      "sha256": "79d3d4c878bcfd6efb80ce30f5ca84670a5f46f51ac6a4ea33aa5c28187132c1",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.source_b_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedB": {
+      "sha256": "ffc69f520395f5b41fe74d2d69c0fdad39c677748b427943b74ee558eda0bdf3",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.source_b_checked": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedCBounds": {
+      "sha256": "adeed5bc246c4cca3b96b7de13c667d5390aac9ea9ba6d88d93ce57e1b065916",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.source_c_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedCEncoding": {
+      "sha256": "4cdba688bb566cfed5e5f40de84873253f117abbd6ad136d1b573739ab2b33ef",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.source_c_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedC": {
+      "sha256": "24ff3161207764e526d46cbbabb0dc6b6c6cddb6257debb67931000b235ce436",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.source_c_checked": []
+      }
+    },
+    "AdmittedMixtureCase1CheckedHorizon": {
+      "sha256": "3421d573589395c0405fb7716c991f92f06d8374dc753a4e780972fce8821199",
+      "axioms": {
+        "SchwarzschildMixtures.Case1.horizon_checked": []
+      }
+    },
+    "AdmittedMixtureCase1Checks": {
+      "sha256": "5d33685945a86de548461074c74c76e490f803ee0a651072521278b9c1b8ab69",
+      "axioms": {}
+    },
+    "AdmittedMixtureCase2CheckedStepABounds": {
+      "sha256": "5972711957fe69c096643fec0edb14f92a2a4317923fa6b6969d73fba2311299",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.step_a_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedStepAEncoding": {
+      "sha256": "22f951032b3ad2318964c9f63b769bdd4ef69719dc5c30555a02db8fabde5a92",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.step_a_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedStepA": {
+      "sha256": "5cd5e9215bceb3d8f1682ac908646915315450298456aeab2ea5f99ee92794b3",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.step_a_checked": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedStepBBounds": {
+      "sha256": "a85fbf11bc57d7cda9ab6290a1a5cfd689168209ae577794c22aac66a1f8ecb4",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.step_b_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedStepBEncoding": {
+      "sha256": "2d7c5c0833f6555d9f5171de294ae59a021aeda7b484ae8861d9bd29138abc70",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.step_b_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedStepB": {
+      "sha256": "7e91382fd457e80821354e893522c846a243ec929927695ff0efc526b7dba7a4",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.step_b_checked": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedStepCBounds": {
+      "sha256": "e7df03d568687c3362cc595e2ba96c2eedcf4ecc911d943b47ebcd19397b8d6a",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.step_c_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedStepCEncoding": {
+      "sha256": "e062e6b15335ee9560841ef933a906749dc02b428f9d4961fadf2d9a5ea03165",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.step_c_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedStepC": {
+      "sha256": "44c34b6633d38c31041a056b9e72ac418fba5241f546b743f26c4976c913e7bb",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.step_c_checked": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedSecondABounds": {
+      "sha256": "db16b16423dc39e6089ee3d484e27de9fad7c574241741be0a8dcd61f3798b17",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.second_a_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedSecondAEncoding": {
+      "sha256": "6b2a30f3dcdd711d081356d713e42f303e530a642a348cf5615a212d98e376bd",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.second_a_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedSecondA": {
+      "sha256": "d7cc7177002404e83e29aeeb58bb7a3cf15f703117f2136eb0002e2cdc573e45",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.second_a_checked": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedSecondBBounds": {
+      "sha256": "890aac0d700db23b9617f7bc9934cfa28d810a56d98227ff3b497c964599192c",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.second_b_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedSecondBEncoding": {
+      "sha256": "37a1b8b2047f14c0c892c66f4bfb1263171a54053db4c142b04399b6b1bf533a",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.second_b_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedSecondB": {
+      "sha256": "cdee32977004063c1f07dd5a18ac6f2b02d00f90ed23ecace1a818513f45e5b2",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.second_b_checked": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedSecondCBounds": {
+      "sha256": "86a88f6f397d76c7beb465d314e7fc46a9de0c690773c16ecc8978b700c95ecb",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.second_c_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedSecondCEncoding": {
+      "sha256": "23ca4df3cf9c5d6e22cfc0deb0b1e15f060bce19426eafff767f0a19def72246",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.second_c_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedSecondC": {
+      "sha256": "52ecfa6d36e065d2db68dc66816228c6105a0f061396d5a817a2a43d581d840b",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.second_c_checked": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedABounds": {
+      "sha256": "934cd6470ab3a31eacd52017f452f372c53e3b1e250b81331336fc72b3a644a8",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.source_a_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedAEncoding": {
+      "sha256": "64ae6a9baa5a9e22ffbfd38fdbe3ca2740b98e59c88955152aaf643a9a3e0e36",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.source_a_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedA": {
+      "sha256": "6473edd988343e82577175ea264f25cec22fae72bde319fc93d6569dc9534b91",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.source_a_checked": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedBBounds": {
+      "sha256": "29ecc7f252fd21e5467bb056aa342901a1586fcadbb425c634fa4b04ba143c14",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.source_b_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedBEncoding": {
+      "sha256": "ded4b38633c94f165c30199cd0103b60b340fb19e3c5558e1ac904010f82a933",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.source_b_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedB": {
+      "sha256": "82b95120149c57aab4f0992ae285571d96189e1316533a59a97bc86a73f22552",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.source_b_checked": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedCBounds": {
+      "sha256": "6582882d228cbb449ec2443944fc8ccc74814b533ab19493bfa1c51741c9817d",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.source_c_checked_bounds": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedCEncoding": {
+      "sha256": "b5dc3c8a997dd0eccf2b36ade4cf0ab3c2188fdfe001ba4d464290d4061bfadd",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.source_c_checked_encoding": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedC": {
+      "sha256": "f83ff3ba67192927c4be63df457a2febdf2c927f6352766da2107ea9c880a100",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.source_c_checked": []
+      }
+    },
+    "AdmittedMixtureCase2CheckedHorizon": {
+      "sha256": "6fa7e9af5f838a5baa0dc672f4d1317ef648995c91345e55502ce9c0d5bc8ece",
+      "axioms": {
+        "SchwarzschildMixtures.Case2.horizon_checked": []
+      }
+    },
+    "AdmittedMixtureCase2Checks": {
+      "sha256": "e52ab0c7f973765522db2149563b0c0efaf33b9977c7c056a37a1f096c498cf2",
+      "axioms": {}
+    },
+    "AdmittedMixtures": {
+      "sha256": "b943aecb70592864990b392e0c312489720bbc5fae1938165b4135e057223e29",
+      "axioms": {
+        "SchwarzschildMixtures.two_admitted_mixtures": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.meromorphic_admitted_solution": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.admitted_horizon_residue": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RegularizationCaseFields": {
+      "sha256": "0ab467d5aa92c0174157d3c5bd2d63a30647b83adcd193133b86693427a3399a",
+      "axioms": {
+        "SchwarzschildMixtures.Regularization.first_field_bridge": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Regularization.second_field_bridge": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Regularization.odd_shift_bridge": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OddCaseCheckedA": {
+      "sha256": "bd5dca1784f9c721be67fe694213146cf0a7113fcc174529a2062afcace1fa79",
+      "axioms": {
+        "SchwarzschildMixtures.OddCase.odd_a_checked": [
+          "propext"
+        ]
+      }
+    },
+    "OddCaseCheckedB": {
+      "sha256": "c132578214142f8a6f1c6f7baf81328d37adfe8e2638d781782071dfecb5acb2",
+      "axioms": {
+        "SchwarzschildMixtures.OddCase.odd_b_checked": [
+          "propext"
+        ]
+      }
+    },
+    "OddCaseCheckedC": {
+      "sha256": "0a253c9c145132cf85d5504bcf55a278d2c8a4d12aac90ece2518a8575cc1572",
+      "axioms": {
+        "SchwarzschildMixtures.OddCase.odd_c_checked": [
+          "propext"
+        ]
+      }
+    },
+    "OddCaseChecks": {
+      "sha256": "8e181fd72ff2ebb927e7923101500a4fd0ec4590b94303e1ffb4cbbb131bbd8c",
+      "axioms": {}
+    },
+    "MixtureClassification": {
+      "sha256": "7762f36d9e2ad0e4a1c2ced2dd8851723978f89aeb7285f8ce1dd8141b41bdb1",
+      "axioms": {
+        "SchwarzschildMixtures.quadratic_source_factorization": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.rational_mixture_classification": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.meromorphic_mixture_classification": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RegularizationBridge": {
+      "sha256": "6ce247967ec53d5ef97c61fc0aa0b8b05e97644b09b4ccfa87be331fdbc7bad5",
+      "axioms": {
+        "SchwarzschildMixtures.Regularization.metric_to_published_regularization": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Regularization.regularization_preserves_local_solvability": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "HorizonRadialEnvelope": {
+      "sha256": "8b4af6d8bcb70b185abed887c809c00cb8a2be18ae6d4d18ef9e08d9085df1bc",
+      "axioms": {
+        "SchwarzschildLaurent.Horizon.rational_value_analytic": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.envelope_jet_analytic": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.envelope_jet_at_horizon": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.analytic_of_simple_pole_cancellation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.extension_agrees_with_evaluation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "AdmittedHorizon": {
+      "sha256": "53d91f88b5f7389d2edbf83e815e1b4f22a8b8e25d6783308666c83c9046c6c5",
+      "axioms": {
+        "SchwarzschildMixtures.admitted_horizon_extension": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "HorizonFrobeniusSeries": {
+      "sha256": "823c36886cdc56cbd16490b5a77c0e8a7894fe79be60b1a081e8e1f2335af105",
+      "axioms": {
+        "SchwarzschildLaurent.Horizon.horizon_coefficient_recurrence": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.horizon_coefficient_norm_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.horizon_growth_uniform": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.ingoing_power_series_on_ball": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.ingoing_has_power_series": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.ingoing_envelope_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "HorizonFrobeniusEquation": {
+      "sha256": "42cc5d09ea8591d81676bdb8e8409ae18014b7f1aba426f79f281c0df23b4e1d",
+      "axioms": {
+        "SchwarzschildLaurent.Horizon.ingoing_envelope_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.ingoing_envelope_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "HorizonIngoingParent": {
+      "sha256": "231c421cef4c8507b1a3914672bf4486589f7ab747b02a3d211a0e7b689ad909",
+      "axioms": {
+        "SchwarzschildLaurent.Horizon.tortoise_has_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.tortoise_real_exterior": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.ingoing_wave_first_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.normalized_envelope_analytic": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.normalized_envelope_residual": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.scaled_envelope_residual": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.ingoing_wave_from_envelope": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "AdmittedFutureHorizon": {
+      "sha256": "3a5ecefedd7eb912bc3fbe2f0931eb96660862623daa15e8a25159c24822c87d",
+      "axioms": {
+        "SchwarzschildMixtures.admitted_future_horizon_of_envelope": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.convergent_ingoing_parent_is_rw_wave": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.ingoing_jet_ratio_expansion": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.admitted_future_horizon_extension": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ExteriorRationalEvaluation": {
+      "sha256": "4954b2bad1e866a2f677811c21d92ffa40b0d3596a2772561ddafd95b53bf7d3",
+      "axioms": {
+        "SchwarzschildLaurent.Exterior.radius_value_eval": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Exterior.radial_eval_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OutgoingEndpointData": {
+      "sha256": "f511c3993963f7b178119f54594cf244b6d7f9ef1928e085db56a531d574ead9",
+      "axioms": {}
+    },
+    "OutgoingEndpointPolynomials": {
+      "sha256": "1a2f8f2f05ce30f97ee74478173f5a833ab6506ead1ba5b038341c1cfbb46ad6",
+      "axioms": {
+        "SchwarzschildMixtures.OutgoingData.degree_from_cap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.coefficient_from_cap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.effective_coefficient": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OutgoingEndpointCaseOne": {
+      "sha256": "1d50704675d4a60e2a87d0068a43e14e03782ec03343d14c12722ef79d314182",
+      "axioms": {
+        "SchwarzschildMixtures.OutgoingData.first_cap_a": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.first_cap_b": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.first_cap_c": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.first_mixed_lead": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.first_mixed_next": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.first_outgoing_lead": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.first_incoming_lead": [
+          "propext"
+        ]
+      }
+    },
+    "OutgoingEndpointCaseTwo": {
+      "sha256": "6b3e360d85fe0be338cdfde605d6c0e62d80deeb5ded79d7499bcb5fed4fff5a",
+      "axioms": {
+        "SchwarzschildMixtures.OutgoingData.second_cap_a": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.second_cap_b": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.second_cap_c": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.second_mixed_lead": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.second_mixed_next": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.second_outgoing_lead": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.second_incoming_lead": [
+          "propext"
+        ]
+      }
+    },
+    "OutgoingMixtureLimits": {
+      "sha256": "e9eb67e9b002deba51d9fbc6e7a40208e7943a2ae5f3508a1810ba34477cc522",
+      "axioms": {
+        "SchwarzschildMixtures.OutgoingData.reciprocal_at_zero_nonzero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.effective_row_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.mixed_reciprocal_divisible": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.mixed_endpoint_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.OutgoingData.signed_endpoint_coefficients": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OutgoingGreenIdentity": {
+      "sha256": "609df4b1229e41b09ec62156e32be7c691c0d8a4d05fc624bb835196c122ecdc",
+      "axioms": {
+        "SchwarzschildLaurent.Outgoing.green_current_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.green_integral_on_interval": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.green_integral_between_endpoint_limits": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.green_integral_from_endpoint_limits": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.signed_current": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.normalized_green_response": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.homogeneous_subtraction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OutgoingWaveLimits": {
+      "sha256": "49199967de649a52238d25e05214fb759d9bd67d48d0fc408377786411fe3db4",
+      "axioms": {
+        "SchwarzschildLaurent.Outgoing.reconstruct_modes": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.current_of_mode_limits": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.ingoing_current_limit": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OutgoingQuadraticLimits": {
+      "sha256": "fdcc5557625f05f6b2740dedbc4d0ecf0fc30d0b18e9157d28446c3a78f78d81",
+      "axioms": {
+        "SchwarzschildLaurent.Outgoing.quadratic_has_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.quadratic_mode_limits": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OutgoingRadiusLimits": {
+      "sha256": "6a8ba7b2ece0194344dd1e677f6d10cf29f0a3b36680f51ee2c4e32b04c09528",
+      "axioms": {
+        "SchwarzschildLaurent.Outgoing.reciprocal_row_limits": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.potential_tends_to_frequency": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.ingoing_exterior_jet": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.ingoing_analytic_current_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OutgoingMixtureInfinity": {
+      "sha256": "583b7a6f27afb1d524a55a2353aeca1efb650ab58b5f10be5d72a500c5c1993a",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.admitted_particular_at_infinity": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ExteriorProjectedSource": {
+      "sha256": "8220bc714ec25bfa76af9c8ab4f844f482e7d50568959b143c9d733257b11502",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.admitted_rows_regular_exterior": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.particular_from_unscaled_row": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.source_from_unscaled_row": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ExteriorRowEquation": {
+      "sha256": "7707174b160bbabacc9351c65436748e3007054cc3cc09620b8a95fcb99181c9",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.unscaled_step_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.unscaled_forced_radial_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ExteriorForcedEquation": {
+      "sha256": "e75d0fcff94061e121af7163b46045929c9556e99fec71c5cde6b3db044c5d6e",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.admitted_exterior_forced_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.exterior_source_continuous": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.exterior_source_interval_integrable": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OutgoingFlux": {
+      "sha256": "4c3fda40dcc5b33d4bc365bf04fbfb2d11b0de33e285ed5736e49a6b8fbdf9f7",
+      "axioms": {
+        "SchwarzschildLaurent.Outgoing.ingoing_analytic_mode_limits": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.flux_balance": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.nonzero_incident_amplitude": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OutgoingMixtureHorizon": {
+      "sha256": "264197d812b49987c84c8a893d71f1084a71fc73fda0e187d5deff52ff0682b9",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.exterior_carrier_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.normalized_horizon_envelope": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.normalized_horizon_modes": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.admitted_horizon_envelope": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.admitted_particular_horizon_current": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LinearInverseSquareLimit": {
+      "sha256": "b0dbc954bb8c85fe6365f7f796c4a0196afb7127f4d289f4f53f834f3e0b901d",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.inverse_square_limit": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.inverse_square_backward_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.inverse_square_forward_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LinearScatteringModes": {
+      "sha256": "336f0aa28369f84d8dad47a87746034d38c979f782bb405f942a2ae03aa23187",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.modal_coefficients_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.rw_scattering_limits": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LinearDarboux": {
+      "sha256": "7f57d4faf639162550f8c96c78e6f480186f75739801cb0164bc2a42abab9288",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.inverse_darboux_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.darboux_recovers_odd": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.inverse_darboux_limits": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LinearODEContinuation": {
+      "sha256": "d3739e50e9eb9a0e831641fb6850c150e121df736b14b83c9e0f27b0f947d473",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.joined_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.global_right_trajectory": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LinearExteriorWave": {
+      "sha256": "b8b81bc6bdabe72faa45c049e49504dce268a90f508122dfa420726064bd9eca",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.exterior_system_eq": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.ingoing_trajectory_equation_at": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.exterior_clamped_system_lipschitz": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.global_regge_wheeler_wave": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OutgoingAngularScale": {
+      "sha256": "ca55272ac5cd783bf967090a1a5eca848e1fb677341e2e9547c77c18b4896b10",
+      "axioms": {
+        "SchwarzschildLaurent.Outgoing.masterFactor_positive": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Outgoing.angular_scale_matches_printed_factor": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OutgoingStrainNormalization": {
+      "sha256": "d94e911b97aedcc529d42b58c64f2d03e75e0e8e5e155fa6f46b342ad1840ea2",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.incident_factor_nonzero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.incident_strain": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.daughter_darboux_readout": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.incoming_strain_cancellation_control": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.normalized_closed_response": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LinearScatteringData": {
+      "sha256": "74a7c561a7485c51d3fe03e26df87d37aa33b5bd5cd4305988ad4efb6ea39f91",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.exists_ingoing_scattering_wave": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.ingoing_scattering_flux": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.global_strain_scattering_data": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LinearZerilliEquation": {
+      "sha256": "1bb8fd38e64c1c1e05a228f6cd17697df2e254774e2763c5d9de221c4dfe64ea",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.schwarzschild_superpotential_limit": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.schwarzschild_superpotential_horizon": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.zerilli_partner_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OutgoingStrainReplay": {
+      "sha256": "6047f38863356000f1d4fb82c962757dfe9cc220905378a7e9a3b357529af79d",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.admitted_outgoing_strain": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LinearStrainScatteringReplay": {
+      "sha256": "91a983724cdb83531b67556494a375cb356c04c6c6fb0010a97f0a4faca1fc7b",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.evenParentFromReference": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.outgoing_strain_with_global_waves": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "CompleteOutgoingStrain": {
+      "sha256": "c34734bf46e7f9ff08a6f13c93b40e1c2296d9a005afffaed01b22498d656436",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.complete_outgoing_strain": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "HomogeneousMatrixData": {
+      "sha256": "9c4f298555611de631030ff389a4808961530163b36e41da2d65b1846bb03460",
+      "axioms": {}
+    },
+    "HomogeneousMatrixRank": {
+      "sha256": "5fc41c5fce42502ffeafadde37f78a67a2aba86922a243cd3ddf936bcfe9bb3a",
+      "axioms": {
+        "SchwarzschildMatrix.homogeneous_coordinate_certificate": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RationalHomogeneousBounds": {
+      "sha256": "9cbc0573570be6d77b46b8fb29da7c8307864ba0d278dac25076574f82238a50",
+      "axioms": {
+        "SchwarzschildLaurent.homogeneous_growth_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.short_span_for_homogeneous_row": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RationalLocalUniqueness": {
+      "sha256": "2c6d4c0ed469494c0e966d109b7bf39d7e1557b71c4fc6731aac75d15dde5692",
+      "axioms": {
+        "SchwarzschildLaurent.homogeneous_target_ne_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.homogeneous_rational_row_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.rational_particular_row_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.admitted_rational_row_exists_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LinearRetardedUniqueness": {
+      "sha256": "adf1317ce4bb7ad6d85e79ca4db1df8039c4189040de580cccf20e29e7e1a4e1",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.ingoing_homogeneous_proportional": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.retarded_solution_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RetardedScattering": {
+      "sha256": "742f5d60827be29a20b9657fbed58b630b2ee2cd1118ae3c46b74b383f0a7fc2",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.admitted_retarded_scattering": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RetardedStrainError": {
+      "sha256": "9a56eb6635dfbcd531d85d976fb705bca1ae84ebfbcaa3a7daf685dd4fb234f4",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.radiation_residual_limit": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.radiation_error_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.ingoing_amplitude_gains": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.unit_horizon_reflected_fraction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.incident_lower_from_modal_norm": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.incident_lower_from_radius": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.incident_lower_from_value": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.boundary_leakage_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.retarded_amplitude_error": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RetardedGreenFunction": {
+      "sha256": "674e2f43f93ff431f679f6d1572d18870503a2c7d8f59ca9c54da5b5711399d0",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.outgoing_partner": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.green_cutoff_identity": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.retarded_green_field_limit": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RetardedGreenReplay": {
+      "sha256": "673aaab8892a7e31953f70c1310567c4a2bf8d5fabe36a8662f2b6cb32df4650",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.admitted_retarded_green_field": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ScatteringTailEstimate": {
+      "sha256": "e5588a3d756e20547d37b0566d36a09be797352d5eecdec9e4b89b7cf707c4b6",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.exterior_wave_norm_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.finite_wronskian_readout_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "AngularMixtureClassification": {
+      "sha256": "89181b3979dfd732534437334fa3082790a699a0596c87f8896be7de882f213f",
+      "axioms": {
+        "SchwarzschildMixtures.angular_mode_rational_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.angular_source_from_three_rows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.angular_source_from_quadratic_coefficients": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.angular_multiplet_rational_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.angular_multiplet_through_maximum_degree": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.different_ratios_cross_obstruction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.different_ratios_cross_mode_has_no_rational_row": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.angular_source_on_admitted_branch": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "AngularRetardedTransport": {
+      "sha256": "e8f1afaace3bd4470ac1552f490f2d85cf9d783a56bba5bb876e05a60d115be3",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.angular_exterior_source_scale": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.admitted_angular_retarded_scattering": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OddSourceEndpointChecks": {
+      "sha256": "64219de64c3b7017c46f46eda60e1f540c25ddb1d1cee1369886289d06c69706",
+      "axioms": {
+        "SchwarzschildMixtures.OddCase.sourceA_degree": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OddCase.sourceB_degree": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OddCase.sourceC_degree": [
+          "propext"
+        ],
+        "SchwarzschildMixtures.OddCase.sourceA_horizon": [],
+        "SchwarzschildMixtures.OddCase.sourceB_horizon": [],
+        "SchwarzschildMixtures.OddCase.sourceC_horizon": [],
+        "SchwarzschildMixtures.OddCase.source_ingoing_slope_horizon": []
+      }
+    },
+    "OddSourceNumerators": {
+      "sha256": "c56a91617a5807ddb9053231fffd0d6b02eec588c1391b8a1d94778ea752b6e7",
+      "axioms": {
+        "SchwarzschildMixtures.odd_source_numerators_at_endpoints": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OddSourceEndpoint": {
+      "sha256": "7c159ece90a73e8d24754c2831e46113c401094066d2db333b4fbe0b0e3821c8",
+      "axioms": {
+        "SchwarzschildMixtures.pure_odd_source_endpoint_data": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RetardedGreenExistence": {
+      "sha256": "7df77fe711d3d028b679115551262e26c0ae71361e010891e666d1a6009331ba",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.retarded_green_exists": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "RadialEndpointEstimates": {
+      "sha256": "894202ad7f0b3e439530176bebbf6296f0a148584207e1619dfca2bb4ab5ed34",
+      "axioms": {
+        "SchwarzschildLaurent.Exterior.polynomial_scaled_limit": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Exterior.polynomial_quotient_scaled_limit": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Exterior.integrable_on_exterior_of_endpoint_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LinearWaveEndpointBounds": {
+      "sha256": "d5e44ca85bbd56cb161167e3483bdd69cfa1295c3ae4428afd29cc25547abc98",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.radial_modes_eventually_bounded": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.ingoing_wave_endpoint_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.outgoing_partner_endpoint_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.source_weight_integrable": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "QuadraticSourceBounds": {
+      "sha256": "edd990810091f2d10f13ca621932eda02c0a6692416ca355e2806203cd7bc8f1",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.polynomial_source_from_fraction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.polynomial_source_continuous": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.polynomial_source_horizon_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.polynomial_source_infinity_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "OddRetardedScattering": {
+      "sha256": "72ce576db7d0e67e012073ad970709ee92f7e750e55314db94f00d523898d05b",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.odd_exterior_source_regular": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.odd_source_radial_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.pure_odd_retarded_scattering": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "AngularRetardedScattering": {
+      "sha256": "0dabc16a55149be8c056d7a0757ac5e37d9cff0cb60da8f23743c123fd42e0c6",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.angular_exterior_three_sources": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.general_angular_retarded_scattering": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ScatteringPrefactorCircle": {
+      "sha256": "27943cfc725e6d001c2881bd71c64dabb48ff48059d0fcdacf895a3c367f8841",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.prefactor_circle": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.prefactor_circle_parameter_unit": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.prefactor_square_norm": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.prefactor_peak_gap": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.prefactor_modulus_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.prefactor_peak_attained": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.printed_second_response_factored": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.second_response_prefactor_nonzero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.printed_second_zero_iff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.printed_second_magnitude_floor": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.printed_second_nonzero_of_reflection": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ScatteringPhysicalBounds": {
+      "sha256": "176623b6393a6dacc8ec4542ee5bec8819ea91c40223769f481c0ab1403af841",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.parent_incidence_unit": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.unit_even_incidence_reflection_loss": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.second_strain_floor_from_incident": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "HorizonSeedEstimates": {
+      "sha256": "2acb7fe1adac30a017096e7891dcecc788d74b170771d0c53a9d6a90f267b195",
+      "axioms": {
+        "SchwarzschildLaurent.Horizon.uniform_taylor_seed_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.scalar_derivative_sum_on_ball": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.Horizon.ingoing_seed_tails": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "UniformHorizonBranch": {
+      "sha256": "b937bd95d4402c75622e9607932f26ad1f01c0150ea3d2f7a99e23d09af17b92",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.horizon_envelope_solves_on_ball": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.ingoing_wave_matches_collar": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ScatteringSoftNonzero": {
+      "sha256": "14cba2cecd292ba188fe7f18e710544a36fe384ed6f0df593c48001c120c885e",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.prefactor_scaled_excess_limit": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.second_prefactor_scaled_limit": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.second_response_soft_floor_of_loss_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.second_response_soft_floor": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.reflection_loss_from_power": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LinearLowFrequencyBarrier": {
+      "sha256": "e82e161091037bc88121188575249656c1b2bfbbf9bdf9f6c5867502d5e45b30",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.forward_positive_pair": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.real_exterior_derivatives": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.square_barrier_subsolution": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.square_growth_in_barrier": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.soft_incidence_at_matching_radius": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.soft_incidence_from_square_seed": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LowFrequencyHorizonData": {
+      "sha256": "5b151f5c05fbc52b1ac7ee6fbbfcc0255451fa937686a170bdf8e9fd5f7b4131",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.horizon_seed_distance_properties": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.positive_horizon_envelope_data": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.positive_horizon_wave_data": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.positive_four_mass_seeds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "PhysicalSoftResponse": {
+      "sha256": "1a1d4819b977dbda5bbed702f88a9b9ec20ebeae753df5175ccfb8d3a3c3a4d7",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.unit_horizon_soft_incidence": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.unit_horizon_soft_absorption": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.ingoing_amplitudes_from_unit_horizon": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.second_retarded_strain_soft_floor": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "StaticReggeWheelerPolynomial": {
+      "sha256": "7b5e7b54bad07079037e49ea7ac0d80c08e29aabb74a2a8117766bc29a0658c5",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.static_coefficient_positive": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.static_coefficient_stops": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.static_envelope_coeff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.static_envelope_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.static_envelope_leading_lower": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.static_wave_growth": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.static_wave_radial_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "StaticBarrierRatio": {
+      "sha256": "0c0c91b47f171b54b33bf0b8a7c0afe1c9704f9f25dfb411a6cdb253fc195230",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.static_comparison_ratio_lower": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.static_wave_comparison": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ExteriorInitialData": {
+      "sha256": "2c634ceee0353dea03fcb0df55bcee15bdc36847d28136bacf7b3afcfd7bd712",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.exterior_wave_from_initial_data": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SharpSoftIncidence": {
+      "sha256": "3948165e9e7307492d4cb545907204538ebcc87218b32d4ca8c3afdc88533334",
+      "axioms": {
+        "SchwarzschildLaurent.LinearWave.static_wave_jet_positive": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.sharp_unit_horizon_incidence": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildLaurent.LinearWave.sharp_unit_horizon_absorption": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SoftExpansionAlgebra": {
+      "sha256": "40c6eb2eab5c601b2851c28a622a74fcfc1c15ac27c3c2f2805329943a43b391",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.value_limit_from_quadratic_quotient": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.quadratic_quotient_product": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.even_envelope_weight_expansion": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.odd_envelope_weight_expansion": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SoftCubicSign": {
+      "sha256": "b48c9afca1abddfdfd08667a3a29217c25e7059e8329594cb86136b5519acc33",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.angular_correction_from_recurrence": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.cubic_phase_shift_negative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.cubic_phase_shift_positive": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.angular_phase_difference_four_five": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SoftCubicTransfer": {
+      "sha256": "1bd3f918d094fc1352daba1fb3717b3ea9aebe4a931cd996243db39bdaf28217",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.phase_removed_second_response_eq": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.phase_removed_second_cubic": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.magnitude_slope_at_negative_real": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.second_magnitude_slope_from_linear_phases": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SoftThresholdFactor": {
+      "sha256": "97f751bbb715e046aa63bfa745b28d37b24644038d038564a4431be246c68185",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.harmonic_deficit_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.harmonic_deficit_at_double": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.second_phase_gap_negative_at_large_label": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.second_threshold_factor_positive": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.second_strain_slope_sign": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LightRingPhaseLimits": {
+      "sha256": "02648584f5fc5a23e88aa184ac34c02af5d987648b2fa5cfebf9b08688ba70cc",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.LightRing.logarithmic_phase_subsequence": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.LightRing.two_term_magnitude_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.LightRing.interference_envelopes_attained": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.LightRing.asymptotic_envelope_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.LightRing.limiting_reflections_balance": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "AngularPolarizationZeros": {
+      "sha256": "a90f200bf402be8304aa64a27497ba752b0820bbcde5bc4d03777c88d60aaeb3",
+      "axioms": {
+        "SchwarzschildMixtures.Strain.angular_retarded_response_coeff": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.angular_radiation_zeros": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "SchwarzschildMixtures.Strain.opposite_spin_no_joint_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  }
+}

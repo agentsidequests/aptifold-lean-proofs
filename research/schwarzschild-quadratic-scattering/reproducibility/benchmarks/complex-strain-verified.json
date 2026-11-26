@@ -1,0 +1,23 @@
+{
+  "ell": 4,
+  "M_omega": "1/2",
+  "match_radius_over_M": "40",
+  "taylor_order": 160,
+  "reciprocal_order": 18,
+  "radial_steps": [
+    107,
+    107
+  ],
+  "amplitude_tail_error": [
+    "[3.122416433147683666436621e-11 +/- 4.41e-36]",
+    "[2.448495752919732812628242e-12 +/- 1.90e-37]"
+  ],
+  "parent_reflection": "[-0.129423279709 +/- 4.99e-13] + [0.991582444020 +/- 4.64e-13]j",
+  "daughter_reflection": "[0.991871072461482 +/- 2.78e-16] + [0.127246906082763 +/- 2.09e-16]j",
+  "first_strain": "[0.0001933164635010546 +/- 5.62e-20] + [2.52685191433005e-5 +/- 7.44e-20]j",
+  "second_strain": "[3.177166501e-5 +/- 5.94e-15] + [1.475886999e-5 +/- 5.41e-15]j",
+  "second_strain_abs": "[3.503231281e-5 +/- 5.53e-15]",
+  "opposition_detuning_degrees": "[-1.1384181624 +/- 8.63e-11]",
+  "magnitude_gap_fraction": "[0.309671447 +/- 4.48e-10]",
+  "relative_reflection_condition": "[143.7238062 +/- 4.42e-8]"
+}
