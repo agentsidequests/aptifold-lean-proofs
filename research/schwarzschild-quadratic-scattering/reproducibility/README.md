@@ -57,6 +57,8 @@ The light-ring Lean proof starts from the assumed logarithmic relative-phase law
 
 This is the **full v1 replay on Lean 4.33.1**. The [focused Theorem 1 replay](../review-4.36.0/) uses Lean 4.36.0.
 
+The full GitHub replay compiled all 570 modules and matched all 592 named axiom reports. The run took 43 minutes 21 seconds with a 10,000 MiB Lean limit. [View the passing run](https://github.com/agentsidequests/aptifold-lean-proofs/actions/runs/46041723055)
+
 Use Python 3.10 or newer, Git, the Lean toolchain `leanprover/lean4:v4.33.1`, and Mathlib at commit `0df444a360eaa60ab8c11dca51a86af692955474`. The script checks the compiler commit, the Mathlib and transitive dependency revisions, and the proof source hashes. Only the standard axioms `propext`, `Classical.choice`, and `Quot.sound` occur in the recorded audits.
 
 Run an integrity check from this directory.
