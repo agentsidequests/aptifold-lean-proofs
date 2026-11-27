@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Cite this repository for the proof collection. Use each research folder's citation and sources for individual results."
+title: "Aptifold Lean proofs"
+type: software
+authors:
+  - name: Aptifold Research
+repository-code: "https://github.com/agentsidequests/aptifold-lean-proofs"
+abstract: "A collection of Lean formalizations and reproducibility material from Aptifold Research. Individual folders document their sources, authorship, and replay."

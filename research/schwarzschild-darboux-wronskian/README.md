@@ -14,20 +14,27 @@ At `g = ω = 1`, the first factor is `-i`. The Lean file checks this case and th
 
 The [Green-kernel module](DarbouxGreenKernel.lean) uses the left solution at the smaller tortoise coordinate and the right solution at the larger one. `green_matching` checks continuity at the source and proves that the right derivative minus the left derivative is one when the product is divided by the Wronskian.
 
-The normalized Darboux map changes both the numerator and the Wronskian. `jump_with_original_wronskian` shows exactly what goes wrong if a solver transforms the numerator and keeps the old denominator. The jump becomes `(g-k)/(g+k)`, which is `-i` in the example above. The reciprocal factor restores the unit jump when both Darboux normalizations are nonzero. This is a local matching test for the two kernel branches. A distributional formula for differentiating the full kernel also has a diagonal contact term.
+The normalized Darboux map changes both the numerator and the Wronskian. `jump_with_original_wronskian` shows exactly what goes wrong if a solver transforms the numerator and keeps the old denominator. The jump becomes `(g-k)/(g+k)`, which is `-i` in the example above. The reciprocal factor restores the unit jump when both Darboux normalizations are nonzero.
+
+## Diagonal contact term
+
+[DarbouxGreenContact.lean](DarbouxGreenContact.lean) checks the derivative in the source coordinate on either side of the diagonal. Its right trace minus its left trace is `-1` when viewed as a function of the evaluation coordinate. `mixed_derivative_contact_pairing` tests the next derivative against a function `φ` that vanishes at the outer endpoints. Integration by parts gives the two regular integrals plus `-φ(y)`. This is the local `-δ(x-y)` term that would be lost by using only the two off-diagonal formulas.
+
+The proof holds the Wronskian fixed as the source variable changes and uses the differentiability and integrability hypotheses in the Lean statement. This makes it a local check for a Green-function calculation with a constant Wronskian.
 
 ## Reproduce
 
 Open this directory with Git and [Elan](https://lean-lang.org/install/) available. The lockfile pins Lean 4.36.0’s Mathlib revision and dependencies.
 
 ```sh
-lake exe cache get Mathlib.Basic.Complex.Basic Mathlib.Analysis.Calculus.Deriv.Mul Mathlib.Analysis.Complex.RealDeriv Mathlib.Tactic.FieldSimp Mathlib.Tactic.NormNum Mathlib.Tactic.Ring
+lake exe cache get Mathlib.Basic.Complex.Basic Mathlib.Analysis.Calculus.Deriv.Mul Mathlib.Analysis.Complex.RealDeriv Mathlib.MeasureTheory.Integral.IntervalIntegral.IntegrationByParts Mathlib.Tactic.FieldSimp Mathlib.Tactic.NormNum Mathlib.Tactic.Ring
 lake build
 lake env lean -DwarningAsError=true DarbouxWronskian.lean
 lake env lean -DwarningAsError=true DarbouxGreenKernel.lean
+lake env lean -DwarningAsError=true DarbouxGreenContact.lean
 ```
 
-The last two commands print the axioms of the named results. Their dependencies are subsets of `propext`, `Classical.choice` and `Quot.sound`.
+The last three commands print the axioms of the named results. Their dependencies are subsets of `propext`, `Classical.choice` and `Quot.sound`.
 
 ## Sources and credit
 
