@@ -50,7 +50,8 @@ jobs:
           python -B replay_lean.py --check-source
           python -B lean/verify_matrix_lean.py referee-supplement.zip --check-data lean/MatrixCertificateData.lean
       - name: Install the interval arithmetic dependency
-        run: python -m pip install --only-binary=:all: python-flint==0.9.0
+        run: |
+          python -m pip install --only-binary=:all: python-flint==0.9.0
       - name: Replay the exclusion certificate and verify the printed strain bounds
         run: |
           echo '9adb1398862ee0516bc464c44e2c703f2b2475a6b1afd18c8a32bf6272f93388  referee-supplement.zip' | sha256sum --check --strict
@@ -84,7 +85,8 @@ jobs:
         with:
           python-version: '3.13'
       - name: Install the interval arithmetic dependency
-        run: python -m pip install --only-binary=:all: python-flint==0.9.0
+        run: |
+          python -m pip install --only-binary=:all: python-flint==0.9.0
       - name: Reintegrate and compare with the recorded intervals
         env:
           POLARIZATION_LEVEL: ${{ matrix.level }}
