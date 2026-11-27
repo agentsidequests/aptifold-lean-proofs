@@ -1,5 +1,5 @@
 name = "AptifoldDarbouxWronskian"
-defaultTargets = ["DarbouxWronskian"]
+defaultTargets = ["DarbouxWronskian", "DarbouxGreenKernel"]
 
 [[require]]
 name = "mathlib"
@@ -8,3 +8,6 @@ rev = "fc4f59e577feb1a4956671bc04ac18aaaf8cd842"
 
 [[lean_lib]]
 name = "DarbouxWronskian"
+
+[[lean_lib]]
+name = "DarbouxGreenKernel"

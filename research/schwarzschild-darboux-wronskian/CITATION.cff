@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "Cite this artifact for the Lean verification of the two Wronskian pairings and radial current."
-title: "Wronskian and radial current of the normalized Schwarzschild Darboux map"
+message: "Cite this artifact for the Lean verification of the Wronskian, radial current, and Green-kernel matching."
+title: "Wronskian, radial current, and Green-kernel matching for the Schwarzschild Darboux map"
 type: software
-version: "1.0.0"
+version: "1.1.0"
 date-released: "2026-11-26"
 authors:
   - name: Aptifold Research
-abstract: "Lean 4.36.0 formalization of the same-frequency Wronskian factor and opposite-frequency current invariance in the normalized Schwarzschild Darboux map. Paul Wishall is the human project lead."
+abstract: "Lean 4.36.0 formalization of the normalized Schwarzschild Darboux map's Wronskian factor, radial current invariance, and unit derivative jump for a Green kernel. Paul Wishall is the human project lead."
