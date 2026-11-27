@@ -2,7 +2,7 @@
 
 **Aptifold Research · 26 November 2026 · preprint for technical review**
 
-[Run the referee checks](reproducibility/#referee-quickstart) · [Read the preprint on alphaXiv](https://www.alphaxiv.org/abs/2611.rational-parity-mixtures-schwarzschild-scattering) · [Download the PDF](paper.pdf) · [View the TeX source](paper/schwarzschild.tex)
+[Run the referee checks](reproducibility/README.md#referee-quickstart) · [Read the preprint on alphaXiv](https://www.alphaxiv.org/abs/2611.rational-parity-mixtures-schwarzschild-scattering) · [Download the PDF](paper.pdf) · [View the TeX source](paper/schwarzschild.tex)
 
 Two incoming gravitational waves at the same frequency generate a daughter wave at twice that frequency. In the highest-angular-momentum channel on Schwarzschild, exactly two incident parity mixtures allow a rational local quadratic particular field. This holds for every integer parent multipole ℓ ≥ 2 and every positive common frequency. Each admitted field gives a unique retarded completion and an exact outgoing complex strain in terms of linear reflection amplitudes.
 
@@ -24,7 +24,7 @@ Aptifold formulated the classification question, derived the result, developed t
 | Does the certificate apply to the metric-derived source and one physical parent? | [Metric and fixed-parent classification](reproducibility/lean/MetricMeromorphicClassification.lean) |
 | Why is there only one retarded solution? | [Conserved-flux proof](reproducibility/lean/LinearRetardedUniqueness.lean) and [construction and strain](reproducibility/lean/RetardedScattering.lean) |
 | What if the incoming azimuthal modes have different parities? | [Complete top-daughter retarded response](reproducibility/lean/AngularRetardedScattering.lean) |
-| Which checks start from the recorded data and which rebuild it? | [Referee quickstart](reproducibility/#referee-quickstart) and [benchmark records](reproducibility/benchmarks/) |
+| Which checks start from the recorded data and which rebuild it? | [Referee quickstart](reproducibility/README.md#referee-quickstart) and [benchmark records](reproducibility/benchmarks/) |
 
 The paper gives the low-frequency sign change for the second mixture, the finite fourth-multipole cancellation benchmark, two certified spin-minus zeros outside the rational class, and the light-ring limit with a winding relative phase. The quadratic strain formulas are Lean-checked. The high-angular-momentum matching is analytic. Lean checks its transfer to the interference envelopes. The radial and finite-frequency calculations use outward-rounded arithmetic.
 

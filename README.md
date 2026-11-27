@@ -4,7 +4,7 @@
 
 [Exactly two rational parity mixtures in quadratic Schwarzschild scattering](research/schwarzschild-quadratic-scattering/) collects the paper, Lean formalization, and numerical replays. The proof covers the exact classification and the unique retarded field in the stated equal-frequency channel.
 
-[Start the scattering referee checks](research/schwarzschild-quadratic-scattering/reproducibility/#referee-quickstart) with the exclusion certificate and the Table 1 strain benchmark.
+[Start the scattering referee checks](research/schwarzschild-quadratic-scattering/reproducibility/README.md#referee-quickstart) with the exclusion certificate and the Table 1 strain benchmark.
 
 [Wronskian, radial current, and Green-kernel matching for the Schwarzschild Darboux map](research/schwarzschild-darboux-wronskian/) verifies the phase factor, the preserved real-frequency current, and the unit derivative jump on Lean 4.36.0.
 

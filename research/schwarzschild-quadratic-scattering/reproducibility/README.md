@@ -4,6 +4,8 @@ The Lean files prove the two-mixture classification for rational local particula
 
 ## Referee quickstart
 
+The [Aptifold replication guide](https://aptifold.ai/research-lab/replicate#scattering-replay) has platform-specific commands and expected results.
+
 Download and extract the [referee supplement](referee-supplement.zip). Use Python 3.13 with Python-FLINT 0.9.0 (`python -m pip install python-flint==0.9.0`). Run the commands below from the extracted folder. Once Python-FLINT is installed, the supplement runs offline.
 
 **Check the exact exclusion certificate.**
