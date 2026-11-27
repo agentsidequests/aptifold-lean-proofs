@@ -99,9 +99,23 @@ The archive keeps the released upstream source bytes and the upstream MIT licens
 
 The [benchmarks](benchmarks/) folder supplies the recorded complex strain, cancellation-band and polarization-zero enclosures, low-frequency doubling ratios, and the light-ring propagation comparison. The light-ring comparisons check the analytic phase asymptotics numerically. The enclosure files give finite-frequency results at their stated labels and intervals.
 
-To reproduce the fourth-multipole polarization zeros at \(M\omega = 1/2\), run the following commands with the same Python-FLINT runtime. Each command prints a JSON record with the two enclosed roots, source coefficients, error controls, and complex strain cross-checks. Compare these with the saved [coarse](benchmarks/polarization-zeros-coarse.json) and [fine](benchmarks/polarization-zeros-fine.json) records.
+## Check the polarization-zero enclosures
+
+Run from this directory with the same Python-FLINT runtime. Each replay prints the two enclosed zeros for ℓ = 4 and Mω = 1/2, along with source coefficients, error controls, and independent strain cross-checks.
 
 ```sh
-python -B benchmarks/replay_polarization.py --level coarse
-python -B benchmarks/replay_polarization.py --level fine
+python -B benchmarks/replay_polarization.py --level coarse > coarse.json
+python -B benchmarks/compare_polarization_zeros.py --level coarse coarse.json
+python -B benchmarks/replay_polarization.py --level fine > fine.json
+python -B benchmarks/compare_polarization_zeros.py --level fine fine.json
 ```
+
+Each zero must overlap a unique saved interval in both the reference parent basis and the incident odd/even strain convention. The input multipoles, frequency, projection, and source hashes must match. The maximum complex radius of each serialized enclosure is `1e-10` for coarse and `1e-16` for fine, rounded up to powers of ten from the published records. A match prints `PASS` and exits successfully. A mismatch prints `FAIL` and exits with status 1.
+
+Run the comparator without arguments to check the [saved coarse](benchmarks/polarization-zeros-coarse.json) and [saved fine](benchmarks/polarization-zeros-fine.json) intervals against each other.
+
+## GitHub replay checks
+
+The [Schwarzschild referee workflow](https://github.com/agentsidequests/aptifold-lean-proofs/actions/workflows/schwarzschild-replay.yml) runs the certificate, archived Table 1 comparison, Lean source hashes, matrix data regeneration, and polarization comparison on changes to this study. Its logs include the comparator's rejection tests.
+
+Use **Run workflow** to request fresh polarization integrations or a Lean kernel replay on the pinned v1 toolchain. The `matrix` option compiles the v1 `MatrixCertificate` target and its imports, and `full` compiles the complete proof closure. A published release with a tag starting `schwarzschild-` runs both polarization integrations and the full Lean replay.

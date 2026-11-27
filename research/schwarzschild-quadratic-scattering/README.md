@@ -41,3 +41,5 @@ This work is available for technical scrutiny. A concrete starting point is the 
 ## Release notes
 
 **27 November 2026.** The reviewer guide now starts with the certificate and strain checks and labels each Lean route. The [Lean 4.36.0 review](review-4.36.0/) replays Theorem 1 as stated in the [v1 preprint](https://www.alphaxiv.org/abs/2611.rational-parity-mixtures-schwarzschild-scattering). The theorem statements, constants, strain formulas, and benchmark values match the [26 November release](https://github.com/agentsidequests/aptifold-lean-proofs/tree/f31879f7d05e1333eebacbc69e668d83b48c1244/research/schwarzschild-quadratic-scattering).
+
+**27 November 2026.** Added a [pass/fail polarization comparison](reproducibility/#check-the-polarization-zero-enclosures) and [GitHub replay checks](reproducibility/#github-replay-checks) for the v1 evidence.

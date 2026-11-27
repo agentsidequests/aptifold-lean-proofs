@@ -1,0 +1,142 @@
+name: Schwarzschild referee replay
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/schwarzschild-quadratic-scattering/**'
+      - '.github/workflows/schwarzschild-replay.yml'
+  pull_request:
+    paths:
+      - 'research/schwarzschild-quadratic-scattering/**'
+      - '.github/workflows/schwarzschild-replay.yml'
+  workflow_dispatch:
+    inputs:
+      rebuild_polarization:
+        description: Rerun the coarse and fine polarization integrations
+        type: boolean
+        default: false
+      lean_replay:
+        description: Select the v1 Lean replay
+        type: choice
+        options: [none, matrix, full]
+        default: none
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+    working-directory: research/schwarzschild-quadratic-scattering/reproducibility
+
+jobs:
+  quick:
+    name: Quick referee checks
+    if: github.event_name != 'release' || startsWith(github.ref_name, 'schwarzschild-')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.13'
+      - name: Verify the Lean source closure and regenerate the matrix data
+        run: |
+          python -B replay_lean.py --check-source
+          python -B lean/verify_matrix_lean.py referee-supplement.zip --check-data lean/MatrixCertificateData.lean
+      - name: Install the interval arithmetic dependency
+        run: python -m pip install --only-binary=:all: python-flint==0.9.0
+      - name: Replay the exclusion certificate and verify the printed strain bounds
+        run: |
+          echo '9adb1398862ee0516bc464c44e2c703f2b2475a6b1afd18c8a32bf6272f93388  referee-supplement.zip' | sha256sum --check --strict
+          manuscript="$(realpath ../paper/schwarzschild.tex)"
+          python -m zipfile -e referee-supplement.zip "$RUNNER_TEMP/referee"
+          cd "$RUNNER_TEMP/referee"
+          python -B review.py --check certificate
+          python -B review.py --check table --manuscript "$manuscript"
+      - name: Compare the pinned polarization records and exercise rejection cases
+        run: |
+          python -B benchmarks/compare_polarization_zeros.py
+          python -B -m unittest discover -s benchmarks -p test_compare_polarization_zeros.py -v
+
+  polarization:
+    name: Fresh polarization replay (${{ matrix.level }})
+    needs: quick
+    if: >-
+      (github.event_name == 'workflow_dispatch' && inputs.rebuild_polarization) ||
+      (github.event_name == 'release' && startsWith(github.ref_name, 'schwarzschild-'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        level: [coarse, fine]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.13'
+      - name: Install the interval arithmetic dependency
+        run: python -m pip install --only-binary=:all: python-flint==0.9.0
+      - name: Reintegrate and compare with the recorded intervals
+        env:
+          POLARIZATION_LEVEL: ${{ matrix.level }}
+        run: |
+          python -B benchmarks/replay_polarization.py --level "$POLARIZATION_LEVEL" --scratch "$RUNNER_TEMP" > "$RUNNER_TEMP/polarization.json"
+          python -B benchmarks/compare_polarization_zeros.py --level "$POLARIZATION_LEVEL" "$RUNNER_TEMP/polarization.json"
+
+  lean:
+    name: Pinned v1 Lean replay
+    needs: quick
+    if: >-
+      (github.event_name == 'workflow_dispatch' && inputs.lean_replay != 'none') ||
+      (github.event_name == 'release' && startsWith(github.ref_name, 'schwarzschild-'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.13'
+      - name: Check out the Mathlib revision from the v1 manifest
+        run: |
+          revision="$(python -c 'import json; print(json.load(open("proof-manifest.json"))["mathlib_revision"])')"
+          git init "$RUNNER_TEMP/mathlib4"
+          git -C "$RUNNER_TEMP/mathlib4" fetch --depth=1 https://github.com/leanprover-community/mathlib4.git "$revision"
+          git -C "$RUNNER_TEMP/mathlib4" checkout --detach FETCH_HEAD
+          test "$(git -C "$RUNNER_TEMP/mathlib4" rev-parse HEAD)" = "$revision"
+      - name: Set up Lean for the pinned Mathlib checkout
+        uses: leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee # v1.7.1
+        with:
+          lake-package-directory: ${{ runner.temp }}/mathlib4
+          auto-config: false
+          build: false
+          lint: false
+          test: false
+          use-github-cache: false
+          use-mathlib-cache: false
+      - name: Fetch the cache for the manifest's Mathlib imports
+        run: |
+          python -c 'import json; print("\n".join(name for name in json.load(open("proof-manifest.json"))["external_imports"] if name.startswith("Mathlib.")))' > "$RUNNER_TEMP/mathlib-imports"
+          mapfile -t imports < "$RUNNER_TEMP/mathlib-imports"
+          test -n "${imports[0]}"
+          cd "$RUNNER_TEMP/mathlib4"
+          lake exe cache get "${imports[@]}"
+      - name: Compile the proof sources and match the axiom reports
+        env:
+          LEAN_REPLAY: ${{ inputs.lean_replay }}
+        run: |
+          targets=()
+          if [[ "$LEAN_REPLAY" == matrix ]]; then
+            targets=(--target MatrixCertificate)
+          fi
+          python -B replay_lean.py --mathlib "$RUNNER_TEMP/mathlib4" --output "$RUNNER_TEMP/lean-replay" "${targets[@]}"
