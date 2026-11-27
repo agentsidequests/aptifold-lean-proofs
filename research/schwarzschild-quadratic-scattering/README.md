@@ -4,6 +4,8 @@
 
 [Read the paper (PDF)](paper.pdf) · [View the TeX source](paper/schwarzschild.tex) · [Replay the Lean proofs](reproducibility/) · [Browse the benchmark records](reproducibility/benchmarks/)
 
+[Review Theorem 1 on Lean 4.36.0](review-4.36.0/)
+
 Two incoming gravitational waves at the same frequency generate a daughter wave at twice that frequency. In the highest-angular-momentum channel on Schwarzschild, exactly two incident parity mixtures allow a rational local quadratic particular field. This holds for every integer parent multipole ℓ ≥ 2 and every positive common frequency. Each admitted field gives a unique retarded completion and an exact outgoing complex strain in terms of linear reflection amplitudes.
 
 Aptifold formulated the classification question, derived the result, developed the follow-on analysis, and wrote the Lean formalization. Paul Wishall led the research project and coordinates publication.

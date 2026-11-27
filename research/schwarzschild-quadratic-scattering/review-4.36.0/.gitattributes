@@ -1,0 +1,2 @@
+ported/*.lean -text whitespace=cr-at-eol
+PORTING.patch text eol=lf whitespace=-trailing-space

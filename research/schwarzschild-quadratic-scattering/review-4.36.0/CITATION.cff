@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Cite this bundle for the Lean replay and the associated alphaXiv preprint for the physics result."
+title: "Exactly two rational parity mixtures in quadratic Schwarzschild scattering (Lean review bundle)"
+type: software
+version: "1.0.0-review.1"
+date-released: "2026-11-26"
+authors:
+  - name: Aptifold Research
+abstract: "Source and replay for Theorem 1 and its supporting proofs, for Lean 4.36.0 and pinned Mathlib. The associated alphaXiv preprint identifies Paul Wishall as human project lead."
