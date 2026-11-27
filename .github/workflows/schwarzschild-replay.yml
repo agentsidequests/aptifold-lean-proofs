@@ -137,8 +137,20 @@ jobs:
         env:
           LEAN_REPLAY: ${{ inputs.lean_replay }}
         run: |
-          targets=()
-          if [[ "$LEAN_REPLAY" == matrix ]]; then
-            targets=(--target MatrixCertificate)
+          heap_mib=2500
+          targets=(--target MatrixCertificate)
+          if [[ "$LEAN_REPLAY" != matrix ]]; then
+            heap_mib=10000
+            # Check the previously observed memory bottleneck before the rest of the closure.
+            targets=(--target RationalLaurent)
+            python -c 'import json; print("\n".join(json.load(open("proof-manifest.json"))["roots"]))' > "$RUNNER_TEMP/lean-roots"
+            mapfile -t roots < "$RUNNER_TEMP/lean-roots"
+            test "${#roots[@]}" -gt 0
+            for root in "${roots[@]}"; do
+              targets+=(--target "$root")
+            done
           fi
-          python -B replay_lean.py --mathlib "$RUNNER_TEMP/mathlib4" --output "$RUNNER_TEMP/lean-replay" "${targets[@]}"
+          printf 'Lean memory limit: %s MiB\n' "$heap_mib"
+          free -m
+          python -B replay_lean.py --mathlib "$RUNNER_TEMP/mathlib4" \
+            --output "$RUNNER_TEMP/lean-replay" --heap-mib "$heap_mib" "${targets[@]}"
