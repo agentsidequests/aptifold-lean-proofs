@@ -4,6 +4,8 @@
 
 [Exactly two rational parity mixtures in quadratic Schwarzschild scattering](research/schwarzschild-quadratic-scattering/) collects the paper, Lean formalization, and numerical replays. The proof covers the exact classification and the unique retarded field in the stated equal-frequency channel.
 
+[Wronskian and radial current of the normalized Schwarzschild Darboux map](research/schwarzschild-darboux-wronskian/) verifies the same-frequency phase factor and the preserved real-frequency current on Lean 4.36.0.
+
 ## Number theory
 
 Lean source for Aptifold’s November 23, 2026 work on prime intervals and proof-network statements. The two Erdős #849 certificates cover 1.098 billion and 7.711 billion integer starting points. Aptifold also found a boundary case that refutes two auxiliary statements in the Erdős #257 proof tree.
@@ -22,7 +24,7 @@ One prime covers many consecutive starting points. The certificates record each 
 
 ## Replay
 
-The standalone replay uses Lean 4.33.1 and [Mathlib at `0df444a360eaa60ab8c11dca51a86af692955474`](https://github.com/leanprover-community/mathlib4/tree/0df444a360eaa60ab8c11dca51a86af692955474). Install Lean through [elan](https://github.com/leanprover/elan) and use PowerShell 7 or later. In a fresh clone, initialize the pinned dependencies and their compiled cache, then run:
+The number-theory replay uses Lean 4.33.1 and [Mathlib at `0df444a360eaa60ab8c11dca51a86af692955474`](https://github.com/leanprover-community/mathlib4/tree/0df444a360eaa60ab8c11dca51a86af692955474). Install Lean through [elan](https://github.com/leanprover/elan) and use PowerShell 7 or later. In a fresh clone, initialize the pinned dependencies and their compiled cache, then run:
 
 ```text
 lake update
