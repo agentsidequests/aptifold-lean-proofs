@@ -4,6 +4,8 @@
 
 [Exactly two rational parity mixtures in quadratic Schwarzschild scattering](research/schwarzschild-quadratic-scattering/) collects the paper, Lean formalization, and numerical replays. The proof covers the exact classification and the unique retarded field in the stated equal-frequency channel.
 
+[Start the scattering referee checks](research/schwarzschild-quadratic-scattering/reproducibility/#referee-quickstart) with the exclusion certificate and the Table 1 strain benchmark.
+
 [Wronskian, radial current, and Green-kernel matching for the Schwarzschild Darboux map](research/schwarzschild-darboux-wronskian/) verifies the phase factor, the preserved real-frequency current, and the unit derivative jump on Lean 4.36.0.
 
 ## Number theory
@@ -22,7 +24,9 @@ One prime covers many consecutive starting points. The certificates record each 
 
 [Schoenfeld’s 1976 theorem](https://doi.org/10.1090/S0025-5718-1976-0457374-X) gives the classical wider prime interval. Aptifold contributed the formal certificates, the sharper bounded argument and its exact cutoff check, the two modulus-one refutations, and the analytic partial proofs. The overall [Erdős #849 problem](https://openproofnetwork.org/problems/erdos-849/) remains open.
 
-## Replay
+<a name="replay"></a>
+
+## Number theory replay
 
 The number-theory replay uses Lean 4.33.1 and [Mathlib at `0df444a360eaa60ab8c11dca51a86af692955474`](https://github.com/leanprover-community/mathlib4/tree/0df444a360eaa60ab8c11dca51a86af692955474). Install Lean through [elan](https://github.com/leanprover/elan) and use PowerShell 7 or later. In a fresh clone, initialize the pinned dependencies and their compiled cache, then run:
 

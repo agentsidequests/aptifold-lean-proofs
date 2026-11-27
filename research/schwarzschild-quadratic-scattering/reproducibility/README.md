@@ -2,6 +2,36 @@
 
 The Lean files prove the two-mixture classification for rational local particular fields in the projected quadratic Schwarzschild equation. They also verify source and reconstruction steps in the chosen gauge, the retarded boundary-value problem, and several consequences of the two closed strain formulas.
 
+## Referee quickstart
+
+Download and extract the [referee supplement](referee-supplement.zip). Use Python 3.13 with Python-FLINT 0.9.0 (`python -m pip install python-flint==0.9.0`). Run the commands below from the extracted folder. Once Python-FLINT is installed, the supplement runs offline.
+
+**Check the exact exclusion certificate.**
+
+```sh
+python -B review.py --check certificate
+```
+
+`PASS: certificate` confirms the witness annihilates all 30 columns of the 41-equation system and that the obstruction is nonzero on the stated parameter domain. The [full Lean replay](#replay-the-lean-proof) also checks the reduction from rational local fields to this system.
+
+**Check the printed strain bounds against the archived intervals.** Save the [paper's TeX source](../paper/schwarzschild.tex) and supply its path.
+
+```sh
+python -B review.py --check table --manuscript "/path/to/schwarzschild.tex"
+```
+
+`PASS: table` confirms that the saved complex strain intervals support the bounds in Table 1.
+
+**Rerun the radial strain benchmark.**
+
+```sh
+python -B review.py --check radial
+```
+
+This longer check regenerates the source and integrates the ℓ = 4, Mω = 1/2 case on two fresh grids. A pass requires the fresh strain to overlap the archived and closed-form enclosures, with absolute normalized complex error below `1.32e-14` on the coarse grid and `1.09e-20` on the fine grid.
+
+The supplement's `REFEREE-START.md` describes the exact source reconstruction, contour integral and independent linear reflection checks. See [the full supplement replay](#rebuild-the-source-and-check-the-numerical-results) to run those together.
+
 ## Find the result you want to check
 
 | Result | Lean source |
@@ -24,6 +54,8 @@ The matrix certificate operates on the derived, pole-subtracted source. The Laur
 The light-ring Lean proof starts from the assumed logarithmic relative-phase law and transfers it to the limiting interference envelopes. The derivation of the law by matching the linear waves is analytic. The angular proof uses the top-multipole coupling normalization given in the paper. Interval calculations provide the numerical examples, including nonzero coefficients needed in the polarization result at the specified frequency.
 
 ## Replay the Lean proof
+
+This is the **full v1 replay on Lean 4.33.1**. The [focused Theorem 1 replay](../review-4.36.0/) uses Lean 4.36.0.
 
 Use Python 3.10 or newer, Git, the Lean toolchain `leanprover/lean4:v4.33.1`, and Mathlib at commit `0df444a360eaa60ab8c11dca51a86af692955474`. The script checks the compiler commit, the Mathlib and transitive dependency revisions, and the proof source hashes. Only the standard axioms `propext`, `Classical.choice`, and `Quot.sound` occur in the recorded audits.
 
@@ -61,7 +93,7 @@ The command `python -B lean/verify_matrix_lean.py referee-supplement.zip` checks
 
 ## Rebuild the source and check the numerical results
 
-Extract [referee-supplement.zip](referee-supplement.zip), then open its `REFEREE-START.md`. From the extracted directory with Python 3.13 and Python-FLINT 0.9.0, run `python -B review.py` to check the exact matrix certificate, compare the three generated source sectors and strain weights, and rerun the radial, independent contour and reflection checks. The script lists narrower individual checks under `--help`.
+After the [quickstart](#referee-quickstart), run `python -B review.py` from the extracted supplement directory to check the exact matrix certificate, compare the three generated source sectors and strain weights, and rerun the radial, independent contour and reflection checks. The script lists individual checks under `--help`.
 
 The archive keeps the released upstream source bytes and the upstream MIT license. Its SHA-256 is `9adb1398862ee0516bc464c44e2c703f2b2475a6b1afd18c8a32bf6272f93388`. Source conventions follow [Bucciotti et al., *Second-order scattering response of a Schwarzschild black hole*](https://arxiv.org/abs/2609.20934v2). The source in the archive is pinned to [the authors' implementation at revision 5831ae7](https://github.com/jredondoyuste/BlackHoleNonlinearities.jl/tree/5831ae75e20b31489ef2034c8bbb13a53c5d4a3d).
 
